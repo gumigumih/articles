@@ -1,3 +1,4 @@
-# Zenn CLI
+# 記事
 
-* [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
+* [Zenn](https://zenn.dev/gumigumih)
+* [Qiita](https://qiita.com/gumigumih)
