@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,6 @@
     "zenn-cli": "^0.1.158"
   },
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.6.1"
+    "@qiita/qiita-cli": "^1.6.2"
   }
 }
