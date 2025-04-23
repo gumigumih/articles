@@ -1,6 +1,6 @@
 ---
 title: "REST API・BFF・GraphQLの違いと使い分けを整理してみた（＋有名サービスの実例付き）"
-emoji: "💨"
+emoji: "📚"
 type: "tech"
 topics: ["API", "GraphQL", "BFF", "Web開発", "API開発"]
 published: true
