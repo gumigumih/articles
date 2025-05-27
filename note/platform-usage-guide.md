@@ -1,3 +1,5 @@
+![cover image](images/platform-usage-guide/platform-usage-guide.png)
+
 # 投稿媒体の使い分けを考えることで、発信しやすくしようと思った話
 
 ## はじめに
