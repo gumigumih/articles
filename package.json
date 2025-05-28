@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preview": "npx concurrently \"npx zenn preview\" \"sleep 2 && open-cli http://localhost:8000\" \"npx qiita preview\"",
+    "qiita:new": "npx qiita new",
+    "qiita:publish": "npx qiita publish",
+    "zenn:new": "npx zenn new:article",
     "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js"
   },
   "repository": {
@@ -19,9 +23,11 @@
   },
   "homepage": "https://github.com/gumigumih/zenn#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.158"
+    "zenn-cli": "^0.1.160"
   },
   "devDependencies": {
-    "@qiita/qiita-cli": "^1.6.2"
+    "@qiita/qiita-cli": "^1.6.2",
+    "concurrently": "^9.1.2",
+    "open-cli": "^8.0.0"
   }
 }
