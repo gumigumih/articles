@@ -1,5 +1,5 @@
 ---
-title: GitHubリポジトリで技術ブログを管理する：Qiita・Zenn・noteの投稿を効率化する実装手順
+title: 技術ブログの管理を効率化：GitHubリポジトリでQiita・Zenn・noteの記事を一元管理する方法
 tags:
   - Qiita
   - GitHub
@@ -7,7 +7,7 @@ tags:
   - CLI
   - Zenn
 private: false
-updated_at: '2025-05-28T11:20:55+09:00'
+updated_at: '2025-05-28T11:35:29+09:00'
 id: 6fcd5fde39ece76eddcb
 organization_url_name: null
 slide: false

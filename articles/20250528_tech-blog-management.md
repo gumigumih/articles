@@ -1,5 +1,5 @@
 ---
-title: "技術ブログの投稿管理を効率化する：GitHubリポジトリを使った記事管理の実践"
+title: "Qiita・Zenn・noteを一元管理！GitHubで始める効率的な技術ブログ運営"
 emoji: "📔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["github", "markdown", "qiita", "zenn", "cli"]
