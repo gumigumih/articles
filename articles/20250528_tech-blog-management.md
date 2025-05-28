@@ -1,6 +1,6 @@
 ---
 title: "技術ブログの投稿管理を効率化する：GitHubリポジトリを使った記事管理の実践"
-emoji: "🗂"
+emoji: "📔"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["github", "markdown", "qiita", "zenn", "cli"]
 published: true
