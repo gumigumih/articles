@@ -1,4 +1,4 @@
-![cover image](images/platform-usage-guide/platform-usage-guide.png)
+![CoverImage](images/20250526_platform-usage-guide/cover.png)
 
 # 投稿媒体の使い分けを考えることで、発信しやすくしようと思った話
 
