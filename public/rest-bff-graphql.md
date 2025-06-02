@@ -7,7 +7,7 @@ tags:
   - BFF
   - API開発
 private: false
-updated_at: '2025-04-23T12:01:47+09:00'
+updated_at: '2025-06-02T19:56:18+09:00'
 id: 1bdd07c06554850621a0
 organization_url_name: null
 slide: false
@@ -154,7 +154,7 @@ Shopify も REST と GraphQL の両方を提供しており、現在は GraphQL 
 
 # ハイブリッド構成例
 
-![image1.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/32320/09c031a1-5702-4e16-b758-68ef0f3e405a.png)
+<img src="https://raw.githubusercontent.com/gumigumih/zenn-qiita/main/images/rest-bff-graphql/image1.png" alt="ハイブリッド構成例">
 
 ---
 

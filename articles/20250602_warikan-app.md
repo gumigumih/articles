@@ -3,7 +3,7 @@ title: "【設計思想】割り勘計算アプリ「わりまる」の開発で
 emoji: "💭"
 type: "tech"
 topics: ["react", "typescript", "ux", "design"]
-published: false
+published: true
 ---
 
 ![CoverImage](/images/20250602_warikan-app/cover.png)
@@ -260,3 +260,10 @@ Cursor の活用により、以下のような具体的な改善が実現でき�
 もし気に入っていただけましたら、ぜひシェアをお願いします。
 
 また、ご意見・ご要望などございましたら、お気軽にコメントください。
+
+---
+
+📚 関連記事：
+
+- [【実装 Tips】React + TypeScript で作る割り勘計算アプリの実装ポイント](https://qiita.com/gumigumih/items/0f201d72decb957a6586) - 技術的な実装の詳細とコード解説
+- [【無料】割り勘計算 WEB サイト「わりまる」で、みんなで楽しむ行事の支払いをスマートに！](https://note.com/gumigumih/n/n8736a45fcd1e?sub_rt=share_pb) - ユーザー目線での機能紹介と使い方の解説
