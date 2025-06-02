@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preview": "npx concurrently \"npx zenn preview\" \"sleep 2 && open-cli http://localhost:8000\" \"npx qiita preview\"",
+    "preview": "npx concurrently \"npx zenn preview\" \"npx qiita preview\" \"sleep 2 && open-cli http://localhost:8000\"",
     "qiita:new": "npx qiita new",
     "qiita:publish": "npx qiita publish",
     "zenn:new": "npx zenn new:article",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/gumigumih/zenn#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.160"
+    "zenn-cli": "^0.1.161"
   },
   "devDependencies": {
     "@qiita/qiita-cli": "^1.6.2",
