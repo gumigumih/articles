@@ -1,6 +1,6 @@
 # 📘 技術記事のまとめ
 
-このリポジトリは、私が執筆している技術記事やノウハウを管理するためのものです。ZennやQiitaで公開している記事の一覧や、ローカルでの執筆環境についてまとめています。
+このリポジトリは、私が執筆している技術記事やノウハウを管理するためのものです。Zenn や Qiita で公開している記事の一覧や、ローカルでの執筆環境についてまとめています。
 
 ## 📝 記事公開先
 
@@ -14,7 +14,7 @@ Zenn CLI を使用すると、ローカルで記事の執筆やプレビュー�
 ### 新しい記事の作成
 
 ```bash
-npx zenn new:article
+npx zenn new:article --slug <記事のスラッグ>
 ```
 
 対話形式でタイトルや公開設定を入力すると、`articles/` フォルダ内に新しい Markdown ファイルが作成されます。
@@ -29,7 +29,7 @@ npx zenn preview
 
 ### 記事の投稿
 
-ZennではCLIからの直接投稿はできません。GitHub連携を使って、`articles/` フォルダにMarkdownファイルを配置し、GitHubにPushすることで記事が公開されます。
+Zenn では CLI からの直接投稿はできません。GitHub 連携を使って、`articles/` フォルダに Markdown ファイルを配置し、GitHub に Push することで記事が公開されます。
 
 詳細: [https://zenn.dev/zenn/articles/zenn-cli-guide](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
@@ -43,7 +43,7 @@ Qiita CLI は、ローカル環境で Qiita 記事の執筆、プレビュー、
 npx qiita new <記事のファイル名>
 ```
 
-このコマンドで `public/` ディレクトリ内に `<記事のファイル名>.md` が作成され、YAML形式のFront Matterが自動的に挿入されます。
+このコマンドで `public/` ディレクトリ内に `<記事のファイル名>.md` が作成され、YAML 形式の Front Matter が自動的に挿入されます。
 
 ### プレビューの起動
 

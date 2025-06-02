@@ -29,6 +29,18 @@ if (!fs.existsSync(outputDir)) {
 const content = fs.readFileSync(inputPath, 'utf8');
 const parsed = matter(content);
 
+// 画像URLを変換する関数
+function convertImageUrls(content) {
+  // Markdownの画像構文を検出する正規表現
+  const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+  
+  return content.replace(imageRegex, (match, alt, url) => {
+    // 画像URLを変換
+    const newUrl = `https://raw.githubusercontent.com/gumigumih/zenn-qiita/main${url}`;
+    return `![${alt}](${newUrl})`;
+  });
+}
+
 const title = parsed.data.title || 'タイトル未設定';
 const tags = parsed.data.topics || [];
 
@@ -49,9 +61,12 @@ const qiitaFrontmatter = {
   ignorePublish: false,
 };
 
+// 画像URLを変換
+const convertedContent = convertImageUrls(parsed.content);
+
 // YAML文字列を手動で生成して、記事内容を結合
 const yamlHeader = yaml.dump(qiitaFrontmatter, { lineWidth: 0 });
-const newContent = `---\n${yamlHeader}---\n${parsed.content}`;
+const newContent = `---\n${yamlHeader}---\n${convertedContent}`;
 
 fs.writeFileSync(outputPath, newContent);
 console.log(`✅ ${targetFile} を ${outputPath} に変換しました`);
