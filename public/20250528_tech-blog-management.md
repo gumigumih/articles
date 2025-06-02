@@ -7,7 +7,7 @@ tags:
   - CLI
   - Zenn
 private: false
-updated_at: '2025-05-28T11:35:29+09:00'
+updated_at: '2025-06-02T17:56:16+09:00'
 id: 6fcd5fde39ece76eddcb
 organization_url_name: null
 slide: false
