@@ -6,7 +6,7 @@ tags:
   - chartjs
   - html2canvas
 private: false
-updated_at: '2025-06-02T20:07:03+09:00'
+updated_at: '2025-06-02T20:16:12+09:00'
 id: 0f201d72decb957a6586
 organization_url_name: null
 slide: false
@@ -350,5 +350,5 @@ const handleDownloadImage = async () => {
 
 📚 関連記事：
 
-- [【設計思想】割り勘計算アプリ「わりまる」の開発で学んだ、ユーザー体験を重視した設計のポイント](https://zenn.dev/articles/20250602_warikan-app) - 設計思想や開発の背景に焦点を当てた記事
+- [【設計思想】割り勘計算アプリ「わりまる」の開発で学んだ、ユーザー体験を重視した設計のポイント](https://zenn.dev/gumigumih/articles/20250602_warikan-app) - 設計思想や開発の背景に焦点を当てた記事
 - [【無料】割り勘計算 WEB サイト「わりまる」で、みんなで楽しむ行事の支払いをスマートに！](https://note.com/gumigumih/n/n8736a45fcd1e?sub_rt=share_pb) - ユーザー目線での機能紹介と使い方の解説
