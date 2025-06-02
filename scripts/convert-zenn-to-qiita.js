@@ -37,7 +37,7 @@ function convertImageUrls(content) {
   return content.replace(imageRegex, (match, alt, url) => {
     // 画像URLを変換
     const newUrl = `https://raw.githubusercontent.com/gumigumih/zenn-qiita/main${url}`;
-    return `![${alt}](${newUrl})`;
+    return `<img src="${newUrl}" alt="${alt}">`;
   });
 }
 
@@ -52,7 +52,7 @@ if (tags.length > 5) {
 
 const qiitaFrontmatter = {
   title,
-  tags: tags.slice(0, 5).map((tag) => `'${tag}'`), // ← シングルクォートで囲む
+  tags: tags.slice(0, 5),
   private: parsed.data.published === false,
   updated_at: '',
   id: null,
