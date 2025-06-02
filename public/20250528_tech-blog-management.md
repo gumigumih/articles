@@ -59,6 +59,7 @@ npx zenn init
 ```
 
 ## 4. ZennとGitHubリポジトリの連携
+
 - [Zennのダッシュボード](https://zenn.dev/dashboard/deploys)にアクセス
 - 「レポジトリ設定」から連携するリポジトリを選択
 
@@ -70,6 +71,7 @@ mkdir -p public note
 ```
 
 ## 6. .gitignoreの設定
+
 ```
 cat << EOF > .gitignore
 node_modules/
@@ -82,17 +84,21 @@ EOF
 
 ## 1. ファイル命名規則
 
-日付_タイトル.md の形式で統一
+日付\_タイトル.md の形式で統一
 例：20240320_tech-blog-management.md
 
 ## 2. 画像管理
 
 ### Qiita
-- ローカルでの画像管理は不可
-- 記事作成時にプレビューから画像をアップロード
-- アップロードした画像はQiitaのサーバーで管理
+
+- ~~ローカルでの画像管理は不可 ~~
+- ~~記事作成時にプレビューから画像をアップロード ~~
+- ~~アップロードした画像はQiitaのサーバーで管理~~
+- 画像はGithubのレポジトリにプッシュしてURLを埋め込むことにしました（2025/06/02更新）
+  - GitHubリポジトリの画像直リンク: `https://raw.githubusercontent.com/ユーザー名/リポジトリ名/main/パス/画像.png`
 
 ### Zenn
+
 - ローカルで画像を管理可能
 - 記事ごとに専用の画像ディレクトリを作成
   ```
@@ -105,6 +111,7 @@ EOF
 - 画像はGitHubリポジトリで管理
 
 ### note
+
 - ローカルで画像を管理可能
 - 記事ごとに専用の画像ディレクトリを作成
 - 画像はGitHubリポジトリで管理
@@ -115,16 +122,19 @@ EOF
 各プラットフォームに合わせた記事の構成を意識しましょう：
 
 ### Qiita
+
 - 具体的な実装手順を重視
 - コード例を多く含める
 - トラブルシューティングの手順を記載
 
 ### Zenn
+
 - 背景や考え方を重視
 - 実装に至った経緯を説明
 - 学びや気づきを共有
 
 ### note
+
 - 非エンジニア向けの説明を心がける
 - 実務での活用例を紹介
 - 体験談や気づきを共有
@@ -148,12 +158,7 @@ npx qiita publish 20240101_article-name
 
 ```bash
 # 記事の作成
-npx zenn new:article
-# ランダムな文字列のファイル名で記事が作成されます
-
-# ファイル名の変更
-# 作成されたファイルを、管理しやすい名前に変更します
-# 例: 20240320_tech-blog-management.md
+npx zenn new:article --slug 20240101_article-name
 
 # プレビューで内容を確認
 npx zenn preview
@@ -165,6 +170,7 @@ git push origin main
 ```
 
 ## 3. noteへの投稿
+
 1. ローカルでMarkdownファイルを作成
 2. プレビューで内容を確認
 3. noteの投稿画面に内容をコピー
@@ -181,5 +187,12 @@ git push origin main
 - [投稿媒体の使い分けを考えることで、発信しやすくしようと思った話](https://note.com/gumigumih/n/n27aec58d87ce)
 
 # 参考リンク
+
 - [Qiita CLI Documentation](https://qiita.com/Qiita/items/666e190490d0af90a92b)
 - [Zenn CLI Documentation](https://zenn.dev/zenn/articles/install-zenn-cli)
+
+# 更新履歴
+
+- 2025/06/02: Qiitaの画像管理方法を更新（GitHubリポジトリでの管理に変更）
+- 2025/06/02: Zenn CLIの記事作成コマンドを更新（--slugオプションを使用する方法に変更）
+- 2025/05/28: 初版公開
