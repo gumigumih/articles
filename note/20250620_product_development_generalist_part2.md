@@ -1,4 +1,4 @@
-![CoverImage](images/20250607_product_development_generalist_part1/cover.webp)
+![CoverImage](images/20250620_product_development_generalist_part2/cover.webp)
 
 # プロダクト開発のジェネラリストとしての軌跡〜第1回：WEB制作からVR/ARの世界へ〜
 
