@@ -8,7 +8,8 @@
     "qiita:new": "npx qiita new",
     "qiita:publish": "npx qiita publish",
     "zenn:new": "npx zenn new:article",
-    "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js"
+    "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js",
+    "note:extract-tables": "node scripts/extract-tables-to-gist.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/gumigumih/zenn#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.161"
+    "zenn-cli": "^0.1.161",
+    "axios": "^1.6.0"
   },
   "devDependencies": {
     "@qiita/qiita-cli": "^1.6.2",

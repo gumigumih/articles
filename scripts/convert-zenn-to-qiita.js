@@ -5,9 +5,41 @@ const yaml = require('js-yaml'); // ← 追加インストール必要
 
 // インストールしていない場合：npm install js-yaml
 
-const targetFile = process.argv[2];
+// ヘルプメッセージを表示する関数
+function showHelp() {
+  console.log(`
+使用方法: node convert-zenn-to-qiita.js <ファイル名>
+
+説明:
+  ZennからQiita用にMarkdownファイルを変換します。
+  - フロントマターの形式を変換
+  - 画像URLをGitHub Rawリンクに変換
+  - タグの数を制限（Qiitaは最大5個）
+
+引数:
+  <ファイル名>    変換するMarkdownファイル名（./articles/ 内のファイル）
+
+オプション:
+  -h, --help     このヘルプメッセージを表示
+
+例:
+  node convert-zenn-to-qiita.js sample-article.md
+  `);
+}
+
+// コマンドライン引数の処理
+const args = process.argv.slice(2);
+const targetFile = args[0];
+
+// ヘルプオプションのチェック
+if (args.includes('--help') || args.includes('-h')) {
+  showHelp();
+  process.exit(0);
+}
+
 if (!targetFile) {
-  console.error('❌ 変換するファイル名を指定してください');
+  console.error('❌ 変換するファイル名を指定してください\n');
+  showHelp();
   process.exit(1);
 }
 
