@@ -69,9 +69,19 @@ npx qiita publish --all
 
 このリポジトリでは、mainブランチへの直接プッシュを防ぐためのGit Hooksが設定されています。
 
-### 🚀 初回セットアップ
+### 🚀 自動セットアップ（推奨）
 
-リポジトリをクローンした後、以下のコマンドを実行してGit Hooksをセットアップしてください：
+リポジトリをクローンした後、`npm install` を実行すると**自動的に**Git Hooksがセットアップされます：
+
+```bash
+git clone https://github.com/gumigumih/articles.git
+cd articles
+npm install  # ← Git Hooksが自動でセットアップされます！
+```
+
+### 🛠️ 手動セットアップ
+
+何らかの理由で手動セットアップが必要な場合は、以下のコマンドを実行してください：
 
 ```bash
 ./scripts/setup-git-hooks.sh
@@ -82,6 +92,7 @@ npx qiita publish --all
 - **mainブランチへの直接プッシュを禁止**
 - **フィーチャーブランチからのプッシュは正常動作**
 - **分かりやすいエラーメッセージと代替案を表示**
+- **CI環境では自動的にスキップ**
 
 ### 💡 推奨ワークフロー
 

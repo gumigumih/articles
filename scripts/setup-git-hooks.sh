@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# CI環境での実行をスキップ
+if [ "$CI" = "true" ] || [ "$NODE_ENV" = "test" ]; then
+    echo "🤖 CI環境を検出したため、Git Hooksのセットアップをスキップします"
+    exit 0
+fi
+
+# Gitリポジトリでない場合は静かに終了
+if [ ! -d ".git" ]; then
+    echo "📝 Gitリポジトリではないため、Git Hooksのセットアップをスキップします"
+    exit 0
+fi
+
 echo "🔧 Git Hooksをセットアップしています..."
 
 # hooksディレクトリが存在することを確認
