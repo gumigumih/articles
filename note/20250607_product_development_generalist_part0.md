@@ -1,4 +1,4 @@
-![CoverImage](images/20250607_product_development_generalist_part1/product_development_generalist_0.png)
+![CoverImage](images/20250607_product_development_generalist_part0/product_development_generalist_0.png)
 
 # プロダクト開発のジェネラリストとしての軌跡〜第0回：プロローグ〜
 

@@ -1,4 +1,4 @@
-![CoverImage](images/20250623_product_development_generalist_part3/product_development_generalist_2.png)
+![CoverImage](images/20250623_product_development_generalist_part2/product_development_generalist_2.png)
 
 # プロダクト開発のジェネラリストとしての軌跡〜第2回：VTuberの技術裏方の世界〜
 
