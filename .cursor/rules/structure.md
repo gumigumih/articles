@@ -39,8 +39,18 @@ published: true
 - title, emoji, type, topics, published を使用
 - Qiita用のtags, private, updated_at, id, organization_url_name, slide, ignorePublish などは不要
 
-### note
-noteではフロントマターは不要です。
+### note（@/note 配下）
+note用記事では、ハッシュタグ管理のために以下のYAML形式のフロントマターを冒頭に記載します。
+
+```yaml
+---
+title: "記事タイトル"
+note_hashtags: "#タグ1 #タグ2 #タグ3 #タグ4 #タグ5"
+---
+```
+- title: 記事タイトル（ダブルクォート必須）
+- note_hashtags: note投稿用のハッシュタグ（#付きでスペース区切り、10個程度まで）
+- note公開時にはフロントマターを削除してコピー
 
 ## 見出し構成
 - H1: 記事タイトル
