@@ -1,6 +1,6 @@
 ---
 title: "【無料】割り勘計算 WEB サイト「わりまる」で、みんなで楽しむ行事の支払いをスマートに！"
-note_hashtags: "#WEBアプリ #個人開発 #便利ツール #プロダクト #UI/UX"
+note_hashtags: "#WEBアプリ #個人開発 #便利ツール #プロダクト #UI・UX"
 ---
 
 ![CoverImage](images/20250602_warikan-app/cover.png)
