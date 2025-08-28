@@ -3,7 +3,7 @@ title: "補助金大型案件でプロジェクトマネジメントを身につ
 note_hashtags: "#プロダクト開発 #ジェネラリスト #プロジェクトマネジメント #補助金 #進行管理"
 ---
 
-![CoverImage](images/20250815_product_development_generalist_part5/product_development_generalist_5.png)
+![CoverImage](images/20250902_product_development_generalist_part5/product_development_generalist_5.png)
 
 # 補助金大型案件でプロジェクトマネジメントを身につける。品質・コスト・納期の現実　【プロダクト開発ジェネラリストの軌跡 第5回】
 
@@ -20,6 +20,8 @@ note_hashtags: "#プロダクト開発 #ジェネラリスト #プロジェク�
 今回は、5年間にわたって毎年新しい補助金を申請し、文化庁・観光庁の補助金を活用した大型プロジェクトを継続的に運営した経験について振り返ってみたいと思います。
 
 このプロジェクトで、プロジェクトマネジメントの本格的なスキルを身につけることができました。
+
+<!-- TOC -->
 
 ## 大型補助金案件への挑戦
 
