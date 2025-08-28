@@ -1,9 +1,10 @@
 ---
 title: "補助金大型案件でプロジェクトマネジメントを身につける。品質・コスト・納期の現実　【プロダクト開発ジェネラリストの軌跡 第5回】"
 note_hashtags: "#プロダクト開発 #ジェネラリスト #プロジェクトマネジメント #補助金 #進行管理"
+date: 2025-08-29
 ---
 
-![CoverImage](images/20250902_product_development_generalist_part5/product_development_generalist_5.png)
+![CoverImage](images/20250829_product_development_generalist_part5/product_development_generalist_5.png)
 
 # 補助金大型案件でプロジェクトマネジメントを身につける。品質・コスト・納期の現実　【プロダクト開発ジェネラリストの軌跡 第5回】
 

@@ -1,6 +1,7 @@
 ---
 title: "【保存版】プロジェクト進行に必要な資料の作り方ガイド：ディレクター初心者向け完全マニュアル"
 note_hashtags: "#プロジェクト管理 #ディレクター #マネジメント #ドキュメント #初心者向け"
+date: 2025-05-28
 ---
 
 ![CoverImage](images/20250528_project-documents-guide/cover.webp)

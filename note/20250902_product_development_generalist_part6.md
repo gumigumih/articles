@@ -1,9 +1,10 @@
 ---
 title: "自社プロダクト立ち上げ。プロダクトデリバリーの全体像の学びと反省　【プロダクト開発ジェネラリストの軌跡 第6回】"
 note_hashtags: "#プロダクト開発 #ジェネラリスト #プロダクトマーケットフィット #MVP #スタートアップ"
+date: 2025-09-02
 ---
 
-![CoverImage](images/20250909_product_development_generalist_part6/product_development_generalist_6.png)
+![CoverImage](images/20250902_product_development_generalist_part6/product_development_generalist_6.png)
 
 # 自社プロダクト立ち上げ。プロダクトデリバリーの全体像の学びと反省　【プロダクト開発ジェネラリストの軌跡 第6回】
 

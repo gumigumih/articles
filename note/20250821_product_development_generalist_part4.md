@@ -1,6 +1,7 @@
 ---
 title: "エンジニア、デザイナー、ディレクターを並行で。複数職種の経験から得た視点切り替えの価値　【プロダクト開発ジェネラリストの軌跡 第4回】"
 note_hashtags: "#プロダクト開発 #ジェネラリスト #複数職種 #視点切り替え #働き方 #スキル"
+date: 2025-08-21
 ---
 
 ![CoverImage](images/20250821_product_development_generalist_part4/product_development_generalist_4.png)

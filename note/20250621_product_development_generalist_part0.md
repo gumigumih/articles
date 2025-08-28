@@ -1,9 +1,10 @@
 ---
 title: "退職を機に振り返る。気づいたら何でも屋になっていたエンジニアの軌跡　【プロダクト開発ジェネラリストの軌跡 第0回】"
 note_hashtags: "#プロダクト開発 #ジェネラリスト #キャリア #エンジニア #退職 #振り返り"
+date: 2025-06-21
 ---
 
-![CoverImage](images/20250607_product_development_generalist_part0/product_development_generalist_0.png)
+![CoverImage](images/20250621_product_development_generalist_part0/product_development_generalist_0.png)
 
 # 退職を機に振り返る。気づいたら何でも屋になっていたエンジニアの軌跡　【プロダクト開発ジェネラリストの軌跡 第0回】
 

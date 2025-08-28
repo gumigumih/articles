@@ -1,6 +1,7 @@
 ---
 title: "緊急対応からヒットアプリまで。WEBアプリ開発で学んだスピードと改善の大切さ　【プロダクト開発ジェネラリストの軌跡 第3回】"
 note_hashtags: "#プロダクト開発 #ジェネラリスト #WEBアプリ開発 #ヒットアプリ #コロナ禍"
+date: 2025-08-01
 ---
 
 ![CoverImage](images/20250801_product_development_generalist_part3/product_development_generalist_3.png)
