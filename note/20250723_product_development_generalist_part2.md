@@ -1,6 +1,12 @@
-![CoverImage](images/20250623_product_development_generalist_part3/product_development_generalist_2.png)
+---
+title: "VTuber番組の技術設営バイトから正社員へ。ロケ弁が楽しみだった濃密な現場の日々　【プロダクト開発ジェネラリストの軌跡 第2回】"
+note_hashtags: "#プロダクト開発 #ジェネラリスト #VTuber #技術裏方 #現場経験 #映像制作"
+date: 2025-07-23
+---
 
-# プロダクト開発のジェネラリストとしての軌跡〜第2回：VTuberの技術裏方の世界〜
+![CoverImage](images/20250723_product_development_generalist_part2/product_development_generalist_2.png)
+
+# VTuber番組の技術設営バイトから正社員へ。ロケ弁が楽しみだった濃密な現場の日々　【プロダクト開発ジェネラリストの軌跡 第2回】
 
 ## はじめに
 
@@ -15,6 +21,8 @@
 
 今回は、VTuberのTV番組での技術設営スタッフとしての経験と、  
 そこから正社員としてのキャリアをスタートするまでの道のりを詳しく振り返ってみたいと思います。
+
+<!-- TOC -->
 
 ## VTuber番組での技術設営スタッフとしての経験
 

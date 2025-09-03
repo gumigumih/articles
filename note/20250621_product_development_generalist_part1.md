@@ -1,6 +1,12 @@
-![CoverImage](images/20250620_product_development_generalist_part2/product_development_generalist_1.png)
+---
+title: "「お仕事くださーい」のうちわでアピールした大学生時代。WEB制作会社での3年間　【プロダクト開発ジェネラリストの軌跡 第1回】"
+note_hashtags: "#プロダクト開発 #ジェネラリスト #WEB制作 #キャリア #学生時代 #バイト経験"
+date: 2025-06-21
+---
 
-# プロダクト開発のジェネラリストとしての軌跡〜第1回：WEB制作からVR/ARの世界へ〜
+![CoverImage](images/20250621_product_development_generalist_part1/product_development_generalist_1.png)
+
+# 「お仕事くださーい」のうちわでアピールした大学生時代。WEB制作会社での3年間　【プロダクト開発ジェネラリストの軌跡 第1回】
 
 ## はじめに
 
@@ -15,6 +21,8 @@
 
 今回は私がWEBエンジニアとしてキャリアをスタートした経緯と、  
 AR/VRの世界との出会いまでを詳しく振り返ってみたいと思います。
+
+<!-- TOC -->
 
 ## 中学〜大学：WEBとの出会いと学習
 

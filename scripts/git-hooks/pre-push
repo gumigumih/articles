@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# mainブランチへの直接プッシュを防ぐ
+protected_branch='main'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+if [ $protected_branch = $current_branch ]; then
+    echo "❌ 直接mainブランチにプッシュすることは禁止されています！"
+    echo "💡 フィーチャーブランチを作成してプルリクエストを使用してください。"
+    echo ""
+    echo "例："
+    echo "  git checkout -b feature/your-feature-name"
+    echo "  git push -u origin feature/your-feature-name"
+    echo ""
+    exit 1 # プッシュを阻止
+fi 
