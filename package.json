@@ -25,8 +25,8 @@
   },
   "homepage": "https://github.com/gumigumih/zenn#readme",
   "dependencies": {
-    "zenn-cli": "^0.1.161",
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "zenn-cli": "^0.2.3"
   },
   "devDependencies": {
     "@qiita/qiita-cli": "^1.6.2",
