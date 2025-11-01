@@ -73,7 +73,16 @@ Technical PM & Web engineer. Reshaping dev teams with AI-assisted processes, rel
 - note/Zenn/Qiita への発信を添えて、技術コミュニティの活動を印象づける。
 
 ## X (Twitter) 用（160字以内）
+
+### 名前
+```
+ぐみ@テクニカルPM
+```
+
+### プロフィール文
+```
 テクニカルPMのぐみ。開発体制の再構成、リリース品質向上、AI活用のディレクション。実装もするPM。note・Zenn・Qiitaで現場メモを書いてます。DMでゆるくご相談を。
+```
 
 ### ねらい
 - タイムラインで一目で専門領域が伝わるよう、キーワードを列挙。
