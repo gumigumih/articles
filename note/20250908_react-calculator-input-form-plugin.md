@@ -4,7 +4,7 @@ note_hashtags: "#React #TypeScript #npm #個人開発 #プラグイン #感想"
 date: 2025-09-08
 ---
 
-![CoverImage](images/20250908_react-calculator-input-form-plugin/20250908_react-calculator-input-form-plugin.png)
+![CoverImage](images/20250908_react-calculator-input-form-plugin/cover.png)
 
 # 【npm公開まで8時間】思い立ったらすぐ動く：React電卓入力フォームを作った話
 

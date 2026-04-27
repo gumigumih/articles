@@ -4,7 +4,7 @@ note_hashtags: "#プロダクト開発 #ジェネラリスト #WEB制作 #キャ
 date: 2025-06-21
 ---
 
-![CoverImage](images/20250621_product_development_generalist_part1/product_development_generalist_1.png)
+![CoverImage](images/20250621_product_development_generalist_part1/cover.png)
 
 # 「お仕事くださーい」のうちわでアピールした大学生時代。WEB制作会社での3年間　【プロダクト開発ジェネラリストの軌跡 第1回】
 
