@@ -4,7 +4,7 @@ note_hashtags: "#プロダクト開発 #ジェネラリスト #VTuber #技術裏
 date: 2025-07-23
 ---
 
-![CoverImage](images/20250723_product_development_generalist_part2/product_development_generalist_2.png)
+![CoverImage](images/20250723_product_development_generalist_part2/cover.png)
 
 # VTuber番組の技術設営バイトから正社員へ。ロケ弁が楽しみだった濃密な現場の日々　【プロダクト開発ジェネラリストの軌跡 第2回】
 
