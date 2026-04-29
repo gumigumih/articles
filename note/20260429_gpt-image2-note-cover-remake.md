@@ -85,7 +85,11 @@ noteの記事らしくする。
 
 ![AIと共に働く時代、“待ち時間”がゴールドタイムになる理由 途中案1](./images/20260429_gpt-image2-note-cover-remake/goldtime_wip_01.png)
 
+この時の指示：**「情報商材っぽく見えるので、noteに合った感じにしたい」**
+
 ![AIと共に働く時代、“待ち時間”がゴールドタイムになる理由 途中案2](./images/20260429_gpt-image2-note-cover-remake/goldtime_wip_02.png)
+
+この時の指示：**「ゴールドタイムは金色にして、タイトル部分を洗練させて」**
 
 ### 完成画像
 
@@ -132,7 +136,11 @@ noteの一覧画面で小さく表示されたときでも、
 
 ![ドキュメントは「未来のために育て続けるもの」だと思う話 途中案1](./images/20260429_gpt-image2-note-cover-remake/living-document_wip_01.png)
 
+この時の指示：**「noteっぽくないので、装飾やイラストを入れたい」**
+
 ![ドキュメントは「未来のために育て続けるもの」だと思う話 途中案2](./images/20260429_gpt-image2-note-cover-remake/living-document_wip_02.png)
+
+この時の指示：**「フォントをポップ体にして、『だと思う話』も追加して」**
 
 ### 完成画像
 
@@ -179,7 +187,11 @@ noteの一覧画面で小さく表示されたときでも、
 
 ![理想のAIプロダクト中核チームとは何か 途中案1](./images/20260429_gpt-image2-note-cover-remake/ai-product-core-team_wip_01.png)
 
+この時の指示：**「noteの記事っぽくして、イラストを入れる方向にする」**
+
 ![理想のAIプロダクト中核チームとは何か 途中案2](./images/20260429_gpt-image2-note-cover-remake/ai-product-core-team_wip_02.png)
+
+この時の指示：**「可愛い寄せにしつつ、洗練させて。フラット系デザインで、背景は薄い紫に」**
 
 ### 完成画像
 
