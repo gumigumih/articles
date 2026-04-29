@@ -1,6 +1,6 @@
 ---
 title: "noteの過去記事カバーをGPT Image 2で作り直してみた"
-note_hashtags: "#生成AI #AI画像生成 #GPTImage #note #デザイン #カバー画像"
+note_hashtags: "#note #生成AI #デザイン #やってみた #AI画像生成 #GPTimage2 #カバー画像"
 date: 2026-04-29
 ---
 
