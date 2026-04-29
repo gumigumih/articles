@@ -77,7 +77,17 @@ noteの記事らしくする。
 
 ここでは、実際に過去記事のカバー画像を作り直したときの画像とプロンプトをまとめておきます。
 
+完成画像だけでは、どう調整して良くなったのかが見えにくいので、途中で生成した画像も一緒に置いておきます。
+
 ## AIと共に働く時代、“待ち時間”がゴールドタイムになる理由
+
+### 途中の画像
+
+![AIと共に働く時代、“待ち時間”がゴールドタイムになる理由 途中案1](./images/20260429_gpt-image2-note-cover-remake/goldtime_wip_01.png)
+
+![AIと共に働く時代、“待ち時間”がゴールドタイムになる理由 途中案2](./images/20260429_gpt-image2-note-cover-remake/goldtime_wip_02.png)
+
+### 完成画像
 
 ![AIと共に働く時代、“待ち時間”がゴールドタイムになる理由](./images/20260429_gpt-image2-note-cover-remake/goldtime.png)
 
@@ -118,6 +128,14 @@ noteの一覧画面で小さく表示されたときでも、
 
 ## ドキュメントは「未来のために育て続けるもの」だと思う話
 
+### 途中の画像
+
+![ドキュメントは「未来のために育て続けるもの」だと思う話 途中案1](./images/20260429_gpt-image2-note-cover-remake/living-document_wip_01.png)
+
+![ドキュメントは「未来のために育て続けるもの」だと思う話 途中案2](./images/20260429_gpt-image2-note-cover-remake/living-document_wip_02.png)
+
+### 完成画像
+
 ![ドキュメントは「未来のために育て続けるもの」だと思う話](./images/20260429_gpt-image2-note-cover-remake/living-document.png)
 
 ### 調整ログ
@@ -156,6 +174,14 @@ noteの一覧画面で小さく表示されたときでも、
 ```
 
 ## 理想のAIプロダクト中核チームとは何か
+
+### 途中の画像
+
+![理想のAIプロダクト中核チームとは何か 途中案1](./images/20260429_gpt-image2-note-cover-remake/ai-product-core-team_wip_01.png)
+
+![理想のAIプロダクト中核チームとは何か 途中案2](./images/20260429_gpt-image2-note-cover-remake/ai-product-core-team_wip_02.png)
+
+### 完成画像
 
 ![理想のAIプロダクト中核チームとは何か](./images/20260429_gpt-image2-note-cover-remake/ai-product-core-team.png)
 
