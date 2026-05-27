@@ -6,7 +6,7 @@ tags:
   - chartjs
   - html2canvas
 private: false
-updated_at: '2025-06-02T20:16:12+09:00'
+updated_at: '2026-05-28T01:32:34+09:00'
 id: 0f201d72decb957a6586
 organization_url_name: null
 slide: false
