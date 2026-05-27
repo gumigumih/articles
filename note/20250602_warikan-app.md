@@ -107,7 +107,7 @@ date: 2025-06-02
 
 ぜひ一度お試しください！
 
-[→ わりまるを試す](https://warimaru.meggumi.com/)
+[→ わりまるを試す](https://meggumi.com/warimaru/)
 
 ---
 

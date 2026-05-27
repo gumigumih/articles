@@ -337,7 +337,7 @@ const handleDownloadImage = async () => {
 
 これらの実装により、ユーザーフレンドリーな割り勘計算アプリを実現することができました。
 
-[→ わりまるを試す](https://warimaru.meggumi.com/)
+[→ わりまるを試す](https://meggumi.com/warimaru/)
 
 ---
 

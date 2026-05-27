@@ -317,7 +317,7 @@ function App() {
 - [npmパッケージ](https://www.npmjs.com/package/@gumigumih/react-calculator-input-form)
 - [GitHubリポジトリ](https://github.com/gumigumih/react-calculator-input-form)
 - [ドキュメント](https://gumigumih.github.io/react-calculator-input-form/)
-- [わりまる（複数人での支払い割り勘）](https://warimaru.meggumi.com/)
+- [わりまる（複数人での支払い割り勘）](https://meggumi.com/warimaru/)
 - [わけたべ（料理ごとの詳細割り勘）](https://waketabe.meggumi.com/)
 
 ---
