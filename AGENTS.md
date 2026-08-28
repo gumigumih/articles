@@ -10,6 +10,8 @@
 - [画像・図解ルール](./AGENTS/image.md)
 - [リンク・参考資料ルール](./AGENTS/link.md)
 - [文体ルール](./AGENTS/style.md)
+- [収益化・トピックリサーチルール](./AGENTS/monetization.md)
+- [週刊AI実装ノート 要約・深掘りプロンプト](./AGENTS/weekly-ai-note-prompt.md)
 
 ---
 
