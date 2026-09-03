@@ -65,6 +65,22 @@ npx qiita publish <記事のファイル名>
 npx qiita publish --all
 ```
 
+## 📊 note 管理画面
+
+`note/` 配下の記事一覧、Gitの未追跡・削除状態、カバー画像の用意状況、note投稿記録を確認・編集する画面を起動できます。note公開状況は `https://note.com/gumigumih` の公開記事スナップショットと照合します（自動取得ではありません）。
+
+```bash
+npm run note:dashboard
+```
+
+ブラウザで `http://127.0.0.1:4310` を開いてください。プロフィール照合データを更新する場合は、公開プロフィールを確認したうえで次を実行します。
+
+```bash
+npm run note:dashboard:build
+```
+
+投稿記録はローカル画面では `note/posting-records.json` に、静的公開画面では利用中ブラウザのローカル保存領域に保存されます。この画面からnoteへの公開やGit操作は行いません。
+
 ## 🛡️ Git Hooks のセットアップ
 
 このリポジトリでは、mainブランチへの直接プッシュを防ぐためのGit Hooksが設定されています。

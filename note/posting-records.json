@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "records": {
+    "20260827_ai-entertainment-night-01": {
+      "status": "published",
+      "publishedAt": "2026-08-27",
+      "noteUrl": "",
+      "noteId": "",
+      "priceYen": 300,
+      "views": 37,
+      "likes": 4,
+      "xPosted": false,
+      "magazine": "AIとわたしの深夜エンタメ会議",
+      "memo": "2026/9/1時点の直近30日ダッシュボード実績。",
+      "recordedAt": "2026-09-01"
+    },
+    "20260831_ai-entertainment-night-02": {
+      "status": "published",
+      "publishedAt": "2026-08-31",
+      "noteUrl": "",
+      "noteId": "",
+      "priceYen": 300,
+      "views": 8,
+      "likes": 0,
+      "xPosted": false,
+      "magazine": "AIとわたしの深夜エンタメ会議",
+      "memo": "2026/9/1時点、公開約23時間の実績。",
+      "recordedAt": "2026-09-01"
+    },
+    "20251231_nameless-team": {
+      "status": "deleted",
+      "publishedAt": "",
+      "noteUrl": "",
+      "noteId": "",
+      "priceYen": null,
+      "views": null,
+      "likes": null,
+      "xPosted": false,
+      "magazine": "",
+      "memo": "ユーザー確認: note.com/gumigumih の公開記事一覧から削除済み。",
+      "recordedAt": "2026-09-03"
+    }
+  }
+}
