@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>note / ops</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-mark"><span class="brand-dot"></span><span>note / ops</span></div>
+        <p class="sidebar-caption">記事制作と投稿記録</p>
+        <nav class="side-nav" aria-label="画面ナビゲーション">
+          <a class="side-nav-item is-active" href="#articles"><span class="nav-icon">▦</span>記事一覧<span class="nav-count" id="nav-article-count">—</span></a>
+          <a class="side-nav-item" href="#changes"><span class="nav-icon">⌁</span>Git変更<span class="nav-count is-alert" id="nav-change-count">—</span></a>
+          <a class="side-nav-item" href="#record"><span class="nav-icon">◷</span>投稿記録</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="source-label">SOURCE</div>
+          <div class="source-path">note/</div>
+          <div class="source-description">リポジトリから生成したスナップショットを確認します</div>
+          <a class="profile-link" href="https://note.com/gumigumih" target="_blank" rel="noreferrer">noteプロフィールを開く ↗</a>
+          <div class="branch-pill"><span class="branch-icon">⑂</span><span id="source-branch">読み込み中</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="breadcrumb"><span>WORKSPACE</span><span class="breadcrumb-separator">/</span><strong>NOTE LIBRARY</strong></div>
+          <div class="topbar-actions"><span class="sync-state" id="sync-state">スナップショットを読み込み中…</span><button class="button button-ghost" id="refresh-button" type="button"><span class="refresh-icon">↻</span> 更新</button></div>
+        </header>
+
+        <div class="content-wrap">
+          <section class="page-intro">
+            <div>
+              <p class="eyebrow">CONTENT CONTROL CENTER</p>
+              <h1>記事の状態を、ひとつの画面で。</h1>
+              <p class="intro-copy">執筆ファイルの現在地と、noteへの投稿記録を並べて確認できます。</p>
+            </div>
+            <div class="head-meta"><span class="head-meta-label">HEAD</span><code id="source-head">—</code></div>
+          </section>
+
+          <div id="error-banner" class="error-banner" hidden></div>
+
+          <section class="stat-grid" aria-label="概要">
+            <article class="stat-card"><div class="stat-label">NOTE ARTICLES</div><div class="stat-value" id="stat-articles">—</div><div class="stat-note">note/直下のMarkdown</div></article>
+            <article class="stat-card stat-card-alert"><div class="stat-label">GIT CHANGES</div><div class="stat-value" id="stat-changes">—</div><div class="stat-note" id="stat-changes-note">未追跡・削除・更新</div></article>
+            <article class="stat-card stat-card-green"><div class="stat-label">NOTE PUBLISHED</div><div class="stat-value" id="stat-published">—</div><div class="stat-note">プロフィールで公開確認</div></article>
+            <article class="stat-card stat-card-purple"><div class="stat-label">COVER ASSETS</div><div class="stat-value" id="stat-covers">—</div><div class="stat-note" id="stat-covers-note">cover.pngの用意状況</div></article>
+          </section>
+
+          <section id="articles" class="workspace-grid">
+            <div class="panel article-panel">
+              <div class="panel-heading">
+                <div><p class="panel-kicker">LIBRARY</p><h2>記事一覧</h2></div>
+                <span class="result-count" id="result-count">—</span>
+              </div>
+              <div class="filter-row">
+                <label class="search-box"><span class="search-icon">⌕</span><input id="search-input" type="search" placeholder="タイトル・スラッグで検索" /></label>
+                <label class="select-wrap"><span class="sr-only">Git状態</span><select id="git-filter"><option value="all">Git状態：すべて</option><option value="changes">変更あり</option><option value="untracked">未追跡</option><option value="deleted">削除</option><option value="clean">変更なし</option></select></label>
+                <label class="select-wrap"><span class="sr-only">note公開状況</span><select id="publication-filter"><option value="all">note公開：すべて</option><option value="published">公開確認</option><option value="not_published">未掲載</option><option value="deleted">削除済み</option></select></label>
+                <label class="select-wrap"><span class="sr-only">カバー画像</span><select id="cover-filter"><option value="all">カバー：すべて</option><option value="ready">用意済み</option><option value="missing">未用意</option><option value="deleted">削除</option></select></label>
+                <label class="select-wrap sort-select"><span class="sr-only">並び順</span><select id="sort-select"><option value="updated">更新が新しい順</option><option value="title">タイトル順</option><option value="status">状態順</option></select></label>
+              </div>
+              <div class="table-wrap">
+                <table class="article-table">
+                  <thead><tr><th>記事</th><th>最終更新</th><th>Git</th><th>カバー</th><th>note公開</th><th><span class="sr-only">選択</span></th></tr></thead>
+                  <tbody id="articles-body"><tr><td colspan="6" class="loading-cell">記事を読み込んでいます…</td></tr></tbody>
+                </table>
+              </div>
+              <div class="table-footer"><span id="table-footer-copy">リポジトリの生成時点を表示</span><span class="live-dot"><i></i> SNAPSHOT</span></div>
+            </div>
+
+            <aside id="record" class="panel record-panel">
+              <div class="panel-heading record-heading"><div><p class="panel-kicker">PUBLISHING LOG</p><h2>投稿記録</h2></div><span class="record-status-dot" id="record-status-dot"></span></div>
+              <div id="record-empty" class="record-empty" hidden><div class="empty-icon">◌</div><strong>記事を選択してください</strong><p>一覧から記事を選ぶと、投稿記録を編集できます。</p></div>
+              <form id="record-form" class="record-form">
+                <div class="selected-article"><div class="selected-label">SELECTED ARTICLE</div><div class="selected-title" id="selected-title">—</div><code id="selected-slug">—</code><div class="selected-profile-status" id="selected-profile-status">—</div></div>
+                <div class="form-grid">
+                  <label class="field field-wide"><span>投稿ステータス</span><select id="record-status"><option value="draft">下書き</option><option value="scheduled">予約済み</option><option value="published">公開済み</option><option value="unpublished">非公開</option><option value="deleted">削除済み</option></select></label>
+                  <label class="field"><span>公開日</span><input id="record-published-at" type="date" /></label>
+                  <label class="field"><span>記録日</span><input id="record-recorded-at" type="date" /></label>
+                  <label class="field"><span>note ID</span><input id="record-note-id" type="text" placeholder="例：n48205822760" /></label>
+                  <label class="field"><span>価格（円）</span><input id="record-price" type="number" min="0" step="100" placeholder="300" /></label>
+                  <label class="field"><span>ビュー</span><input id="record-views" type="number" min="0" step="1" placeholder="—" /></label>
+                  <label class="field"><span>スキ</span><input id="record-likes" type="number" min="0" step="1" placeholder="—" /></label>
+                  <label class="field field-wide"><span>note URL</span><input id="record-url" type="url" placeholder="https://note.com/..." /></label>
+                  <label class="field field-wide"><span>マガジン</span><input id="record-magazine" type="text" placeholder="マガジン名" /></label>
+                  <label class="checkbox-field field-wide"><input id="record-x-posted" type="checkbox" /><span>Xへ投稿済み</span></label>
+                  <label class="field field-wide"><span>メモ</span><textarea id="record-memo" rows="3" placeholder="公開時の補足、数値の取得時点など"></textarea></label>
+                </div>
+                <div class="form-footnote"><span>保存先</span><code>note/posting-records.json</code></div>
+                <button class="button button-primary save-button" type="submit"><span>✓</span> 投稿記録を保存</button>
+                <p class="boundary-note">この画面は投稿記録だけを更新します。note公開・Git操作は行いません。保存内容はこのブラウザに保持されます。</p>
+              </form>
+            </aside>
+          </section>
+
+          <section id="changes" class="panel changes-panel">
+            <div class="panel-heading"><div><p class="panel-kicker">WORKTREE SIGNALS</p><h2>Git変更</h2></div><span class="change-hint">note/ 配下の現在の差分</span></div>
+            <div id="changes-list" class="changes-list"><div class="loading-cell">変更を読み込んでいます…</div></div>
+          </section>
+
+          <footer class="page-footer"><span>note / ops</span><span>記事・Git状態・投稿ログ・カバー準備を確認する個人用画面</span></footer>
+        </div>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

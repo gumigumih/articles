@@ -10,6 +10,8 @@
     "zenn:new": "npx zenn new:article",
     "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js",
     "note:extract-tables": "node scripts/extract-tables-to-gist.js",
+    "note:dashboard": "node scripts/note-dashboard-server.js",
+    "note:dashboard:build": "node scripts/build-note-dashboard-state.js",
     "postinstall": "./scripts/setup-git-hooks.sh"
   },
   "repository": {
