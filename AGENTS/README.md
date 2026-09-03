@@ -9,6 +9,8 @@
 - 記事構成・テンプレート: `AGENTS/structure.md`
 - 品質管理・チェックリスト: `AGENTS/quality.md`
 - 文体ルール: `AGENTS/style.md`
+- 執筆委譲の共通ルール: `AGENTS/writing-workflow.md`
+- 一般note・ブログ記事の執筆ルール: `AGENTS/general-note.md`
 - 画像・図解ルール: `AGENTS/image.md`
 - リンク・参考資料ルール: `AGENTS/link.md`
 - 収益化・トピックリサーチルール: `AGENTS/monetization.md`
@@ -18,4 +20,3 @@
 補足
 - ルートの `AGENTS.md` は、Codex が参照する短いサマリです。詳細は本フォルダの各ファイルを参照してください。
 - 必要に応じて英訳を追加する場合は、原本（日本語）を優先し、差分が出ないよう同期してください。
-

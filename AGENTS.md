@@ -10,6 +10,8 @@
 - [画像・図解ルール](./AGENTS/image.md)
 - [リンク・参考資料ルール](./AGENTS/link.md)
 - [文体ルール](./AGENTS/style.md)
+- [執筆委譲の共通ルール](./AGENTS/writing-workflow.md)
+- [一般note・ブログ記事の執筆ルール](./AGENTS/general-note.md)
 - [収益化・トピックリサーチルール](./AGENTS/monetization.md)
 - [週刊AI実装ノート 要約・深掘りプロンプト](./AGENTS/weekly-ai-note-prompt.md)
 
@@ -18,4 +20,3 @@
 各ファイルの内容を必ず確認し、執筆・投稿時に遵守してください。
 
 > ルールの詳細や更新履歴は各ファイルを参照してください。
-
