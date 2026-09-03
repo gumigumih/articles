@@ -1,0 +1,630 @@
+{
+  "generatedAt": "2026-09-03T03:09:48.032Z",
+  "source": {
+    "directory": "note/",
+    "branch": "feature/20260831_ai-entertainment-night-02",
+    "head": "b304673",
+    "recordsPath": "note/posting-records.json",
+    "profile": "https://note.com/gumigumih",
+    "profileFetchedAt": "2026-09-03",
+    "mode": "repository snapshot"
+  },
+  "summary": {
+    "articles": 24,
+    "changes": 8,
+    "articleChanges": 4,
+    "untracked": 3,
+    "deleted": 3,
+    "published": 20,
+    "notPublished": 3,
+    "deletedPublications": 1,
+    "missingRecords": 21,
+    "readyCovers": 21,
+    "missingCovers": 3
+  },
+  "articles": [
+    {
+      "path": "note/20260903_task-management-without-task-management.md",
+      "slug": "20260903_task-management-without-task-management",
+      "title": "タスク管理をさせないタスク管理を作りたかった。PoCで一区切りにした話",
+      "hashtags": "#AI活用 #タスク管理 #プロダクト開発 #PM #仕事術",
+      "gitStatus": "untracked",
+      "gitCode": "??",
+      "exists": true,
+      "lastCommitAt": null,
+      "lastActivityAt": "2026-09-02T19:03:09.543Z",
+      "lineCount": 91,
+      "cover": {
+        "path": "note/images/20260903_task-management-without-task-management/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": null,
+      "publicationStatus": "not_published"
+    },
+    {
+      "path": "note/20260831_ai-entertainment-night-02.md",
+      "slug": "20260831_ai-entertainment-night-02",
+      "title": "Sora 2が消えた夜、Googleが仕掛けた一手｜AIとわたしの深夜エンタメ会議 #2",
+      "hashtags": "#AI活用 #エンタメ #ゲーム #生成AI #動画生成AI #AIとわたしの深夜エンタメ会議",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-08-31T19:45:46+09:00",
+      "lastActivityAt": "2026-08-31T19:45:46+09:00",
+      "lineCount": 226,
+      "cover": {
+        "path": "note/images/20260831_ai-entertainment-night-02/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": {
+        "status": "published",
+        "publishedAt": "2026-08-31",
+        "noteUrl": "",
+        "noteId": "",
+        "priceYen": 300,
+        "views": 8,
+        "likes": 0,
+        "xPosted": false,
+        "magazine": "AIとわたしの深夜エンタメ会議",
+        "memo": "2026/9/1時点、公開約23時間の実績。",
+        "recordedAt": "2026-09-01"
+      },
+      "noteProfile": {
+        "noteId": "n48205822760d",
+        "noteUrl": "https://note.com/gumigumih/n/n48205822760d"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20260829_membership-announcement-magazine-update.md",
+      "slug": "20260829_membership-announcement-magazine-update",
+      "title": "「AIとわたしの深夜エンタメ会議」はじめました、というお知らせ",
+      "hashtags": "#AI活用 #エンタメ #生成AI #note毎日更新 #メンバーシップ #AIとわたしの深夜エンタメ会議",
+      "gitStatus": "deleted",
+      "gitCode": " D",
+      "exists": false,
+      "lastCommitAt": "2026-08-31T19:48:12+09:00",
+      "lastActivityAt": "2026-08-31T19:48:12+09:00",
+      "lineCount": 41,
+      "cover": {
+        "path": "note/images/20260829_membership-announcement-magazine-update/cover.png",
+        "exists": false,
+        "status": "missing"
+      },
+      "record": null,
+      "noteProfile": null,
+      "publicationStatus": "not_published"
+    },
+    {
+      "path": "note/20260829_local-llm-16gb-mac.md",
+      "slug": "20260829_local-llm-16gb-mac",
+      "title": "話題のローカルLLM、MacBook Air 16GBでは二回とも無理だった話",
+      "hashtags": "#AI活用 #生成AI #ローカルLLM #Qwen3 #Mac #気づき",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-08-31T19:48:12+09:00",
+      "lastActivityAt": "2026-08-31T19:48:12+09:00",
+      "lineCount": 42,
+      "cover": {
+        "path": "note/images/20260829_local-llm-16gb-mac/cover.png",
+        "exists": false,
+        "status": "missing"
+      },
+      "record": null,
+      "noteProfile": null,
+      "publicationStatus": "not_published"
+    },
+    {
+      "path": "note/20260827_ai-entertainment-night-01.md",
+      "slug": "20260827_ai-entertainment-night-01",
+      "title": "『ライザ』とAI、チャートを揺るがす夜｜AIとわたしの深夜エンタメ会議 #1",
+      "hashtags": "#AI活用 #エンタメ #ゲーム #音楽 #生成AI #AIとわたしの深夜エンタメ会議",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-08-28T03:32:56Z",
+      "lastActivityAt": "2026-08-28T03:32:56Z",
+      "lineCount": 195,
+      "cover": {
+        "path": "note/images/20260827_ai-entertainment-night-01/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": {
+        "status": "published",
+        "publishedAt": "2026-08-27",
+        "noteUrl": "",
+        "noteId": "",
+        "priceYen": 300,
+        "views": 37,
+        "likes": 4,
+        "xPosted": false,
+        "magazine": "AIとわたしの深夜エンタメ会議",
+        "memo": "2026/9/1時点の直近30日ダッシュボード実績。",
+        "recordedAt": "2026-09-01"
+      },
+      "noteProfile": {
+        "noteId": "nf5fee2e2f291",
+        "noteUrl": "https://note.com/gumigumih/n/nf5fee2e2f291"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20260826_ai-engineering-terms-too-many.md",
+      "slug": "20260826_ai-engineering-terms-too-many",
+      "title": "「〇〇エンジニアリング」という言葉についていけなくなった私が、結局大事にしていた3つのこと",
+      "hashtags": "#AI活用 #仕事術 #キャリア #生成AI #気づき",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-08-28T03:32:56Z",
+      "lastActivityAt": "2026-08-28T03:32:56Z",
+      "lineCount": 62,
+      "cover": {
+        "path": "note/images/20260826_ai-engineering-terms-too-many/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "nde21e9d70819",
+        "noteUrl": "https://note.com/gumigumih/n/nde21e9d70819"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20260429_gpt-image2-note-cover-remake.md",
+      "slug": "20260429_gpt-image2-note-cover-remake",
+      "title": "noteカバー画像をGPT Image 2で作るプロンプト集",
+      "hashtags": "#note #生成AI #AI画像生成 #GPTimage2 #カバー画像 #プロンプト #有料記事",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-05-09T11:56:19+09:00",
+      "lastActivityAt": "2026-05-09T11:56:19+09:00",
+      "lineCount": 437,
+      "cover": {
+        "path": "note/images/20260429_gpt-image2-note-cover-remake/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n141b8aaf342d",
+        "noteUrl": "https://note.com/gumigumih/n/n141b8aaf342d"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20260327_ideal-ai-product-team.md",
+      "slug": "20260327_ideal-ai-product-team",
+      "title": "理想のAIプロダクト中核チームとは何か",
+      "hashtags": "#AI開発 #プロダクト開発 #チームづくり #PM #UX",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-05-20T19:06:05+09:00",
+      "lastActivityAt": "2026-05-20T19:06:05+09:00",
+      "lineCount": 154,
+      "cover": {
+        "path": "note/images/20260327_ideal-ai-product-team/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n9c6255c876fc",
+        "noteUrl": "https://note.com/gumigumih/n/n9c6255c876fc"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20251231_nameless-team.md",
+      "slug": "20251231_nameless-team",
+      "title": "名前のついていない場所で、しっくりきた理由",
+      "hashtags": "#キャリア #チームづくり #広告業界 #プロダクト思考 #働き方",
+      "gitStatus": "deleted",
+      "gitCode": " D",
+      "exists": false,
+      "lastCommitAt": "2025-11-15T11:40:04+09:00",
+      "lastActivityAt": "2025-11-15T11:40:04+09:00",
+      "lineCount": 50,
+      "cover": {
+        "path": "note/images/20251231_nameless-team/cover.png",
+        "exists": false,
+        "status": "missing"
+      },
+      "record": {
+        "status": "deleted",
+        "publishedAt": "",
+        "noteUrl": "",
+        "noteId": "",
+        "priceYen": null,
+        "views": null,
+        "likes": null,
+        "xPosted": false,
+        "magazine": "",
+        "memo": "ユーザー確認: note.com/gumigumih の公開記事一覧から削除済み。",
+        "recordedAt": "2026-09-03"
+      },
+      "noteProfile": null,
+      "publicationStatus": "deleted"
+    },
+    {
+      "path": "note/20251120_living-document.md",
+      "slug": "20251120_living-document",
+      "title": "ドキュメントは「未来のために育て続けるもの」だと思う話",
+      "hashtags": "",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 158,
+      "cover": {
+        "path": "note/images/20251120_living-document/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "nc89e71943c11",
+        "noteUrl": "https://note.com/gumigumih/n/nc89e71943c11"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20251115_goldtime.md",
+      "slug": "20251115_goldtime",
+      "title": "AIと共に働く時代、“待ち時間”がゴールドタイムになる理由",
+      "hashtags": "#AI活用 #働き方 #思考法 #クリエイティブ #プロダクティビティ",
+      "gitStatus": "modified",
+      "gitCode": " M",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-09-02T19:26:34.683Z",
+      "lineCount": 48,
+      "cover": {
+        "path": "note/images/20251115_goldtime/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n931e7774d33c",
+        "noteUrl": "https://note.com/gumigumih/n/n931e7774d33c"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20251101_development-structure-4layers.md",
+      "slug": "20251101_development-structure-4layers",
+      "title": "プロジェクト立て直しロードマップ：開発体制4レイヤーまとめ",
+      "hashtags": "",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 256,
+      "cover": {
+        "path": "note/images/20251101_development-structure-4layers/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n5fcca1a098e3",
+        "noteUrl": "https://note.com/gumigumih/n/n5fcca1a098e3"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250919_learn-new-domains-3-tips-director.md",
+      "slug": "20250919_learn-new-domains-3-tips-director",
+      "title": "【実体験】現場で鍛えたディレクターが教える「知らない分野のディレクションを行う3つのコツ」",
+      "hashtags": "#ディレクション #プロジェクトマネジメント #仕事術 #スキルアップ #キャリア #PM #ディレクター",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 136,
+      "cover": {
+        "path": "note/images/20250919_learn-new-domains-3-tips-director/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n19ae2c3330a9",
+        "noteUrl": "https://note.com/gumigumih/n/n19ae2c3330a9"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250908_react-calculator-input-form-plugin.md",
+      "slug": "20250908_react-calculator-input-form-plugin",
+      "title": "【npm公開まで8時間】思い立ったらすぐ動く：React電卓入力フォームを作った話",
+      "hashtags": "#React #TypeScript #npm #個人開発 #プラグイン #感想",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-05-28T01:31:41+09:00",
+      "lastActivityAt": "2026-05-28T01:31:41+09:00",
+      "lineCount": 153,
+      "cover": {
+        "path": "note/images/20250908_react-calculator-input-form-plugin/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n5096c1bce553",
+        "noteUrl": "https://note.com/gumigumih/n/n5096c1bce553"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250902_product_development_generalist_part6.md",
+      "slug": "20250902_product_development_generalist_part6",
+      "title": "自社プロダクト立ち上げ。プロダクトデリバリーの全体像の学びと反省　【プロダクト開発ジェネラリストの軌跡 第6回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #プロダクトマーケットフィット #MVP",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 210,
+      "cover": {
+        "path": "note/images/20250902_product_development_generalist_part6/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "na44002a60554",
+        "noteUrl": "https://note.com/gumigumih/n/na44002a60554"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250829_product_development_generalist_part5.md",
+      "slug": "20250829_product_development_generalist_part5",
+      "title": "補助金大型案件でプロジェクトマネジメントを身につける。品質・コスト・納期の現実　【プロダクト開発ジェネラリストの軌跡 第5回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #プロジェクトマネジメント #補助金 #進行管理",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 149,
+      "cover": {
+        "path": "note/images/20250829_product_development_generalist_part5/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n39f50df5a4f8",
+        "noteUrl": "https://note.com/gumigumih/n/n39f50df5a4f8"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250821_product_development_generalist_part4.md",
+      "slug": "20250821_product_development_generalist_part4",
+      "title": "エンジニア、デザイナー、ディレクターを並行で。複数職種の経験から得た視点切り替えの価値　【プロダクト開発ジェネラリストの軌跡 第4回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #複数職種 #視点切り替え #働き方 #スキル",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 108,
+      "cover": {
+        "path": "note/images/20250821_product_development_generalist_part4/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "na61ef68f1b51",
+        "noteUrl": "https://note.com/gumigumih/n/na61ef68f1b51"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250801_product_development_generalist_part3.md",
+      "slug": "20250801_product_development_generalist_part3",
+      "title": "緊急対応からヒットアプリまで。WEBアプリ開発で学んだスピードと改善の大切さ　【プロダクト開発ジェネラリストの軌跡 第3回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #WEBアプリ開発 #ヒットアプリ #コロナ禍",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 87,
+      "cover": {
+        "path": "note/images/20250801_product_development_generalist_part3/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n9554d19370cf",
+        "noteUrl": "https://note.com/gumigumih/n/n9554d19370cf"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250723_product_development_generalist_part2.md",
+      "slug": "20250723_product_development_generalist_part2",
+      "title": "VTuber番組の技術設営バイトから正社員へ。ロケ弁が楽しみだった濃密な現場の日々　【プロダクト開発ジェネラリストの軌跡 第2回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #VTuber #技術裏方 #現場経験 #映像制作",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 99,
+      "cover": {
+        "path": "note/images/20250723_product_development_generalist_part2/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n1627cabe2be6",
+        "noteUrl": "https://note.com/gumigumih/n/n1627cabe2be6"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250621_product_development_generalist_part1.md",
+      "slug": "20250621_product_development_generalist_part1",
+      "title": "「お仕事くださーい」のうちわでアピールした大学生時代。WEB制作会社での3年間　【プロダクト開発ジェネラリストの軌跡 第1回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #WEB制作 #キャリア #学生時代 #バイト経験",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 142,
+      "cover": {
+        "path": "note/images/20250621_product_development_generalist_part1/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n0469e879904a",
+        "noteUrl": "https://note.com/gumigumih/n/n0469e879904a"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250621_product_development_generalist_part0.md",
+      "slug": "20250621_product_development_generalist_part0",
+      "title": "退職を機に振り返る。気づいたら何でも屋になっていたエンジニアの軌跡　【プロダクト開発ジェネラリストの軌跡 第0回】",
+      "hashtags": "#プロダクト開発 #ジェネラリスト #キャリア #エンジニア #退職 #振り返り",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 177,
+      "cover": {
+        "path": "note/images/20250621_product_development_generalist_part0/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "nce988ef9dfd9",
+        "noteUrl": "https://note.com/gumigumih/n/nce988ef9dfd9"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250602_warikan-app.md",
+      "slug": "20250602_warikan-app",
+      "title": "【無料】割り勘計算 WEB サイト「わりまる」で、みんなで楽しむ行事の支払いをスマートに！",
+      "hashtags": "#WEBアプリ #個人開発 #便利ツール #プロダクト #UI・UX",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-05-28T01:31:41+09:00",
+      "lastActivityAt": "2026-05-28T01:31:41+09:00",
+      "lineCount": 125,
+      "cover": {
+        "path": "note/images/20250602_warikan-app/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n8736a45fcd1e",
+        "noteUrl": "https://note.com/gumigumih/n/n8736a45fcd1e"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250528_project-documents-guide.md",
+      "slug": "20250528_project-documents-guide",
+      "title": "【保存版】プロジェクト進行に必要な資料の選び方ガイド：ディレクター初心者向け全体マップ",
+      "hashtags": "#プロジェクト管理 #ディレクター #マネジメント #ドキュメント #初心者向け",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2026-04-28T01:18:38+09:00",
+      "lastActivityAt": "2026-04-28T01:18:38+09:00",
+      "lineCount": 243,
+      "cover": {
+        "path": "note/images/20250528_project-documents-guide/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n1b7bde552e30",
+        "noteUrl": "https://note.com/gumigumih/n/n1b7bde552e30"
+      },
+      "publicationStatus": "published"
+    },
+    {
+      "path": "note/20250526_platform-usage-guide.md",
+      "slug": "20250526_platform-usage-guide",
+      "title": "投稿媒体の使い分けを考えることで、発信しやすくしようと思った話",
+      "hashtags": "#情報発信 #ブログ #記事執筆 #エンジニア #プラットフォーム",
+      "gitStatus": "clean",
+      "gitCode": "  ",
+      "exists": true,
+      "lastCommitAt": "2025-09-18T11:18:46+09:00",
+      "lastActivityAt": "2025-09-18T11:18:46+09:00",
+      "lineCount": 174,
+      "cover": {
+        "path": "note/images/20250526_platform-usage-guide/cover.png",
+        "exists": true,
+        "status": "ready"
+      },
+      "record": null,
+      "noteProfile": {
+        "noteId": "n27aec58d87ce",
+        "noteUrl": "https://note.com/gumigumih/n/n27aec58d87ce"
+      },
+      "publicationStatus": "published"
+    }
+  ],
+  "changes": [
+    {
+      "path": "note/20260831_ai-entertainment-night-02.x-post.md",
+      "code": " D",
+      "status": "deleted",
+      "exists": false
+    },
+    {
+      "path": "note/images/20251115_goldtime/cover.png",
+      "code": "R ",
+      "status": "renamed",
+      "exists": true
+    },
+    {
+      "path": "note/images/20260903_task-management-without-task-management/cover.png",
+      "code": "??",
+      "status": "untracked",
+      "exists": true
+    },
+    {
+      "path": "note/posting-records.json",
+      "code": "??",
+      "status": "untracked",
+      "exists": true
+    }
+  ],
+  "recordsError": null
+}
