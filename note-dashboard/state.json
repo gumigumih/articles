@@ -99,8 +99,8 @@
       "publicationStatus": "not_published"
     },
     {
-      "path": "note/20260829_local-llm-16gb-mac.md",
-      "slug": "20260829_local-llm-16gb-mac",
+      "path": "note/20260904_local-llm-16gb-mac.md",
+      "slug": "20260904_local-llm-16gb-mac",
       "title": "話題のローカルLLM、MacBook Air 16GBでは二回とも無理だった話",
       "hashtags": "#AI活用 #生成AI #ローカルLLM #Qwen3 #Mac #気づき",
       "gitStatus": "clean",
@@ -110,7 +110,7 @@
       "lastActivityAt": "2026-08-31T19:48:12+09:00",
       "lineCount": 42,
       "cover": {
-        "path": "note/images/20260829_local-llm-16gb-mac/cover.png",
+        "path": "note/images/20260904_local-llm-16gb-mac/cover.png",
         "exists": false,
         "status": "missing"
       },
