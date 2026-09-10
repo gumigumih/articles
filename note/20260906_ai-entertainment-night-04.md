@@ -36,12 +36,16 @@ BlenderやAseprite、ペイントソフト、GarageBandを触る。
 アニメのティザーサイトを、画像生成や素材加工込みで作った報告です。
 後続の投稿では、サイトを3D回廊にした例も紹介されています。
 
+<!-- note:embed -->
 https://x.com/Vtuber7144/status/2096007353435148340?s=20
+<!-- /note:embed -->
 
 ゲームの試作では、「ガチャ演出を作って」という依頼がありました。
 そこから操作できるゲームと公開用サイトまで作られたという報告です。
 
+<!-- note:embed -->
 https://x.com/gigabit_million/status/2096094717989867681
+<!-- /note:embed -->
 
 **ひとこと**: これが企画会議で見せられる試作になったら、かなり強いですよね。
 仕様書を読む前に、まず一回引いてもらえる。その想像ができるのがいいです。
@@ -52,17 +56,25 @@ https://x.com/gigabit_million/status/2096094717989867681
 自分で描いた線画を渡し、着彩だけを任せた事例もあります。
 レイヤー作成、拡大、ペン選択までAIが操作したという報告です。
 
+<!-- note:embed -->
 https://x.com/qibiz_me/status/2096000743786627103
+<!-- /note:embed -->
 
+<!-- note:embed -->
 https://x.com/taiyaki_sun/status/2096149368193839455
+<!-- /note:embed -->
 
 さらに、Asepriteで「ピクセルアート風」ではないドット絵を作ったという例も出ています。
 
+<!-- note:embed -->
 https://x.com/suemaruuuuuuX/status/2096212351502721361?s=20
+<!-- /note:embed -->
 
 AIが画面上のマウスを動かして操作する「Computer Use」で、絵を描く事例もあります。
 
+<!-- note:embed -->
 https://x.com/keitowebai/status/2096124169406775325
+<!-- /note:embed -->
 
 **ひとこと**: 線画、ラフ、色指定は人が決める。
 そのうえで反復作業を任せるなら、かなり気持ちのいい分業です。
@@ -73,7 +85,9 @@ GarageBandで曲を作るよう頼んだ事例があります。
 10本のSTEM分割音源ができたという利用者報告です。
 投稿者の説明では、AstraはPythonで曲のプログラムを書いたと答えたそうです。
 
+<!-- note:embed -->
 https://x.com/varts_works/status/2096194813439906228
+<!-- /note:embed -->
 
 **ひとこと**: 完成曲を一個もらうより、パート別の音源が残る方がうれしいです。
 「ここ、もう少し静かに」が自分でできるようになります。
@@ -96,63 +110,91 @@ https://x.com/varts_works/status/2096194813439906228
 
 Unreal Engineの世界に、Astraを使った住人を置き、それぞれが生き延びようとする様子を試した投稿です。
 
+<!-- note:embed -->
 https://x.com/mattshumer_/status/2095596175705399482
+<!-- /note:embed -->
 
 家の画像をもとに、家具や小物を含む3D空間を組み立てた試行です。
 
+<!-- note:embed -->
 https://x.com/tomkrcha/status/2095598645190291775
+<!-- /note:embed -->
 
 家の3Dモデルを歩いて回れるUnreal Engineの空間にするデモです。完成前に空間を体験する、という見せ方を試しています。
 
+<!-- note:embed -->
 https://x.com/ChrisGPT/status/2095594374843232583
+<!-- /note:embed -->
 
 マンハッタンの街並みをUnreal Engineで作ったという3D制作の試行です。
 
+<!-- note:embed -->
 https://x.com/mattshumer_/status/2095609734845927525
+<!-- /note:embed -->
 
 ブラウザ上で動く、1回の指示から作った3Dゲームのデモです。
 
+<!-- note:embed -->
 https://x.com/theo/status/2095599934766764338
+<!-- /note:embed -->
 
 Minecraftのようなブロック状の3D世界を作らせた試行です。
 
+<!-- note:embed -->
 https://x.com/flavioAd/status/2095597137849446688
+<!-- /note:embed -->
 
 Waterlooの街を歩ける3D空間として再現したというデモです。
 
+<!-- note:embed -->
 https://x.com/danshipper/status/2095880567313092770
+<!-- /note:embed -->
 
 Unity上に街を作り、移動できる状態にした試行です。
 
+<!-- note:embed -->
 https://x.com/ChrisGPT/status/2095601996770263362
+<!-- /note:embed -->
 
 操作して遊べるアドベンチャーゲームを作らせたという報告です。
 
+<!-- note:embed -->
 https://x.com/petergostev/status/2095596341422440714
+<!-- /note:embed -->
 
 都市を育てるシミュレーションゲーム風のデモを作った投稿です。
 
+<!-- note:embed -->
 https://x.com/MatthewBerman/status/2095595893991129444
+<!-- /note:embed -->
 
 ### 画面づくりと日常業務の試行
 
 画面のデザインから実装までをつないだ、フロントエンド制作の公式デモです。
 
+<!-- note:embed -->
 https://x.com/OpenAIDevs/status/2095596149654868092
+<!-- /note:embed -->
 
 問い合わせメールの下書き作成と、顧客の声を整理する様子を同じ投稿で紹介したデモです。
 
+<!-- note:embed -->
 https://x.com/clairevo/status/2095596028523319487
+<!-- /note:embed -->
 
 ### 動画と文章の試行
 
 動画を確認し、必要な場面を抜き出して粗く組み立てる作業を試したレビューです。
 
+<!-- note:embed -->
 https://x.com/danshipper/status/2095593705214300394
+<!-- /note:embed -->
 
 取材メモをもとに記事の初稿を作らせた試行です。
 
+<!-- note:embed -->
 https://x.com/danshipper/status/2095877348314730821
+<!-- /note:embed -->
 
 **ひとこと**: 派手なゲーム制作だけの話ではないのが面白いです。
 ただし、ここにあるのは公開された試行やデモです。実案件での制作実績と読み替えないようにしたいです。
