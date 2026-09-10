@@ -1,6 +1,6 @@
 ---
 title: "ChatGPT Images 2.5は、制作工程をつなぐAIになった｜AIとわたしの深夜エンタメ会議 #05"
-note_hashtags: "#生成AI #ChatGPT #画像生成AI #ゲーム制作 #映像制作 #AI活用"
+note_hashtags: "#生成AI #ChatGPT #AI画像生成 #ゲーム制作 #映像制作 #AI活用"
 ---
 
 ![CoverImage](./images/20260910_ai-entertainment-night-05/cover.png)
