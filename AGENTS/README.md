@@ -4,17 +4,27 @@
 
 原本の言語: 日本語（このフォルダの文書を正本とします）
 
-ファイル一覧
-- プラットフォーム別: `AGENTS/platform.md`
-- 記事構成・テンプレート: `AGENTS/structure.md`
-- 品質管理・チェックリスト: `AGENTS/quality.md`
-- 文体ルール: `AGENTS/style.md`
-- 執筆委譲の共通ルール: `AGENTS/writing-workflow.md`
-- 一般note・ブログ記事の執筆ルール: `AGENTS/general-note.md`
-- 画像・図解ルール: `AGENTS/image.md`
-- リンク・参考資料ルール: `AGENTS/link.md`
-- 収益化・トピックリサーチルール: `AGENTS/monetization.md`
-- 週刊AI実装ノート 要約・深掘りプロンプト: `AGENTS/weekly-ai-note-prompt.md`
+
+## common
+
+- 執筆委譲・タイトル設計: `AGENTS/common/writing-workflow.md`
+- 記事構成: `AGENTS/common/structure.md`
+- 品質: `AGENTS/common/quality.md`
+- 文体: `AGENTS/common/style.md`
+- 画像・図解: `AGENTS/common/image.md`
+- リンク・参考資料: `AGENTS/common/link.md`
+
+## platforms と note
+
+- プラットフォーム別: `AGENTS/platforms/platform.md`
+- 一般note・ブログ記事: `AGENTS/note/general-note.md`
+
+## magazines/ai-entertainment
+
+- 記事執筆: `AGENTS/magazines/ai-entertainment/article.md`
+- 通常回テンプレート・文章化依頼プロンプト: `AGENTS/magazines/ai-entertainment/weekly-template.md`
+- 収益化・トピックリサーチ: `AGENTS/magazines/ai-entertainment/monetization.md`
+- 分析ログ: `AGENTS/magazines/ai-entertainment/analytics-log.md`
 - サマリ（日本語）: `AGENTS/RULES.ja.md`
 
 補足
