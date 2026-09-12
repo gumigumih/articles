@@ -11,7 +11,6 @@
     "zenn:new": "npm --prefix zenn run new",
     "zenn:preview": "npm --prefix zenn run preview",
     "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js",
-    "note:extract-tables": "node scripts/extract-tables-to-gist.js",
     "postinstall": "./scripts/setup-git-hooks.sh"
   },
   "repository": {
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/gumigumih/articles#readme",
   "dependencies": {
-    "axios": "^1.6.0",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0"
   },

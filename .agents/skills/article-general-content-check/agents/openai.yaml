@@ -1,0 +1,3 @@
+interface:
+  display_name: "Article: General Content Check"
+  short_description: "一般向け記事を公開前にレビュー"

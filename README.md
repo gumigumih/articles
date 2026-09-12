@@ -105,6 +105,20 @@ QiitaのGitHub Actionsは`gumigumih/qiita-content`側で実行します。子レ
 
 noteの記事管理は、Sites上の[note Article Manager](https://note-article-manager.megumi-love-ramen.chatgpt.site/)で行います。記事本文と画像の正本は親レポジトリの`note/`です。この画面からnote、X、Gitへの書き込みは行いません。
 
+## 📋 記事内の表をGistにする
+
+記事内の表をGistとして管理するときは、プロジェクトSkillの`$article-table-gist`を使います。対象表、Gistの公開範囲、記事に反映する差分を確認してから、Gist作成・更新と記事ファイルの変更を実行します。GitHub CLIの認証を使うため、記事リポジトリにGist用トークンを保存しません。
+
+## ✍️ 執筆用Skill
+
+執筆・公開前レビューに使うSkillは、このプロジェクトの`.agents/skills/`で管理します。
+
+- `$gumi-writing-style`: ぐみ名義のnote記事の文体調整
+- `$article-general-content-check`: note・Qiita・Zenn・ブログ記事の一般向けレビュー
+- `$article-ai-entertainment-content-check`: 「AIとわたしの深夜エンタメ会議」専用レビュー
+
+日本語全般の診断・推敲に使う`natural-japanese`は、汎用Skillとして個人側に残します。
+
 ## 🛡️ Git Hooks のセットアップ
 
 このリポジトリでは、mainブランチへの直接プッシュを防ぐためのGit Hooksが設定されています。
