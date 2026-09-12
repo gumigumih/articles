@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
-const yaml = require('js-yaml'); // ← 追加インストール必要
-
-// インストールしていない場合：npm install js-yaml
+const yaml = require('js-yaml');
 
 // ヘルプメッセージを表示する関数
 function showHelp() {
@@ -17,13 +15,13 @@ function showHelp() {
   - タグの数を制限（Qiitaは最大5個）
 
 引数:
-  <ファイル名>    変換するMarkdownファイル名（./articles/ 内のファイル）
+  <ファイル名>    変換するMarkdownファイル名（./zenn/articles/ 内のファイル）
 
 オプション:
   -h, --help     このヘルプメッセージを表示
 
 例:
-  node convert-zenn-to-qiita.js sample-article.md
+  node scripts/convert-zenn-to-qiita.js sample-article.md
   `);
 }
 
@@ -43,11 +41,13 @@ if (!targetFile) {
   process.exit(1);
 }
 
-const inputDir = './articles';
-const outputDir = './public';
+const repoRoot = path.resolve(__dirname, '..');
+const inputDir = path.join(repoRoot, 'zenn', 'articles');
+const outputDir = path.join(repoRoot, 'qiita', 'public');
+const articleFileName = path.basename(targetFile);
 
-const inputPath = path.join(inputDir, targetFile);
-const outputPath = path.join(outputDir, targetFile);
+const inputPath = path.join(inputDir, articleFileName);
+const outputPath = path.join(outputDir, articleFileName);
 
 if (!fs.existsSync(inputPath)) {
   console.error(`❌ 指定されたファイルが見つかりません: ${inputPath}`);
@@ -55,7 +55,7 @@ if (!fs.existsSync(inputPath)) {
 }
 
 if (!fs.existsSync(outputDir)) {
-  fs.mkdirSync(outputDir);
+  fs.mkdirSync(outputDir, { recursive: true });
 }
 
 const content = fs.readFileSync(inputPath, 'utf8');
@@ -68,7 +68,7 @@ function convertImageUrls(content) {
   
   return content.replace(imageRegex, (match, alt, url) => {
     // 画像URLを変換
-    const newUrl = `https://raw.githubusercontent.com/gumigumih/zenn-qiita/main${url}`;
+    const newUrl = `https://raw.githubusercontent.com/gumigumih/zenn-content/main${url}`;
     return `<img src="${newUrl}" alt="${alt}">`;
   });
 }

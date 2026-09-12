@@ -2,7 +2,7 @@
 
 ## フロントマター（メタデータ）
 
-### Qiita（@/public 配下）
+### Qiita（@/qiita/public 配下）
 Qiita用記事では、以下のYAML形式のフロントマターを冒頭に記載します。
 
 ```yaml
@@ -24,7 +24,7 @@ ignorePublish: false
 - private, updated_at, id, organization_url_name, slide, ignorePublish などQiita独自フィールド
 - emoji, type, topics, published などは使わない
 
-### Zenn（@/articles 配下）
+### Zenn（@/zenn/articles 配下）
 Zenn用記事では、以下のYAML形式のフロントマターを冒頭に記載します。
 
 ```yaml
@@ -65,19 +65,6 @@ note_hashtags: "#タグ1 #タグ2 #タグ3 #タグ4 #タグ5"
 - H2: 主要セクション
 - H3: サブセクション
 - H4以降: 詳細な説明
-<<<<<<<< HEAD:codex/structure.md
-- **見出しの後には必ず1行空白を入れてください。**
-
-## Markdown記法の基本ルール
-- **次が空行でない改行には、行末にスペース2つ（半角2つ）を必ずつけてください。**
-  - これによりMarkdownで意図した改行が反映されます。 
-
-## Gitブランチ戦略
-- **mainブランチ**: 公開済みの記事を管理します。直接のプッシュは原則禁止です。
-- **記事執筆ブランチ**: 新しい記事を書く、または既存の記事を修正する場合は、必ず`main`ブランチから新しいブランチを作成してください。
-  - ブランチ名の例: `feature/20250919_new-article-name`
-- **Pull Request**: 執筆が完了したら、`main`ブランチへのPull Requestを作成します。セルフレビュー後、マージしてください。
-========
 - 見出しの後には必ず1行空白を入れてください。
 
 ## Markdown記法の基本ルール
@@ -89,5 +76,3 @@ note_hashtags: "#タグ1 #タグ2 #タグ3 #タグ4 #タグ5"
 - 記事執筆ブランチ: 新しい記事を書く、または既存の記事を修正する場合は、必ず`main`ブランチから新しいブランチを作成してください。
   - ブランチ名の例: `feature/20250919_new-article-name`
 - Pull Request: 執筆が完了したら、`main`ブランチへのPull Requestを作成します。セルフレビュー後、マージしてください。
-
->>>>>>>> codex:AGENTS/structure.md

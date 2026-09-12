@@ -1,0 +1,8 @@
+[submodule "zenn"]
+	path = zenn
+	url = https://github.com/gumigumih/zenn-content.git
+	branch = main
+[submodule "qiita"]
+	path = qiita
+	url = https://github.com/gumigumih/qiita-content.git
+	branch = main
