@@ -1,5 +1,6 @@
 ---
 title: "ローカルAIとLLMの現在地、創作の裏側を覗く夜｜AIとわたしの深夜エンタメ会議 #3"
+note_id: "nb5dc20933d23"
 note_hashtags: "#生成AI #ローカルLLM #LLM #AIエンタメ #個人創作 #AIとわたしの深夜エンタメ会議"
 date: 2026-09-03
 ---
