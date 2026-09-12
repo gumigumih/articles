@@ -1,5 +1,6 @@
 ---
 title: "【npm公開まで8時間】思い立ったらすぐ動く：React電卓入力フォームを作った話"
+note_id: "n5096c1bce553"
 note_hashtags: "#React #TypeScript #npm #個人開発 #プラグイン #感想"
 date: 2025-09-08
 ---

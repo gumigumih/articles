@@ -1,5 +1,6 @@
 ---
 title: "理想のAIプロダクト中核チームとは何か"
+note_id: "n9c6255c876fc"
 note_hashtags: "#AI開発 #プロダクト開発 #チームづくり #PM #UX"
 date: 2026-03-27
 ---
