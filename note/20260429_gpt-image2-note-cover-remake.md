@@ -1,5 +1,6 @@
 ---
 title: "noteカバー画像をGPT Image 2で作るプロンプト集"
+note_id: "n141b8aaf342d"
 note_hashtags: "#note #生成AI #AI画像生成 #GPTimage2 #カバー画像 #プロンプト #有料記事"
 date: 2026-04-29
 ---
