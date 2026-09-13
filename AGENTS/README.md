@@ -1,32 +1,29 @@
-# ルール集（単一ソース）
+# ルール集（AI向けルーティング）
 
-このディレクトリは、本リポジトリの執筆・運用ルールの単一ソースです。各プラットフォームや記事構成、文体、画像、品質チェックなどの詳細をここに集約しています。
+このディレクトリは、本リポジトリの執筆・記事管理ルールの正本です。原本の言語は日本語です。
 
-原本の言語: 日本語（このフォルダの文書を正本とします）
+## 最初の分岐
 
+1. ルートの`AGENTS.md`を読む。
+2. 記事の保存先で媒体を判定する。
+3. `AGENTS/platforms/README.md`から、note・Zenn・Qiitaのいずれかの入口を選ぶ。
+4. 入口に書かれた共通ルールと、記事種別の専用ルールだけを読む。
 
-## common
+## ルールの配置
 
-- 執筆委譲・タイトル設計: `AGENTS/common/writing-workflow.md`
-- 記事構成: `AGENTS/common/structure.md`
-- 品質: `AGENTS/common/quality.md`
-- 文体: `AGENTS/common/style.md`
-- 画像・図解: `AGENTS/common/image.md`
-- リンク・参考資料: `AGENTS/common/link.md`
+- 全媒体共通: `AGENTS/common/README.md`
+- 媒体別の入口と正本: `AGENTS/platforms/{note,zenn,qiita}/README.md`
+- note一般記事: `AGENTS/platforms/note/general-note.md`
+- noteマガジン固有: `AGENTS/magazines/ai-entertainment/`
 
-## platforms と note
+## 読み分け
 
-- プラットフォーム別: `AGENTS/platforms/platform.md`
-- 一般note・ブログ記事: `AGENTS/note/general-note.md`
+| 作業 | 追加で読むもの |
+| --- | --- |
+| 本文を新規作成・改稿 | 記事種別に対応するチェック用skillをすべて適用 |
+| noteのフロントマター確認 | `AGENTS/platforms/note/README.md` |
+| 通常回のマガジン記事 | `article.md` + `weekly-template.md` |
+| 収益化・候補調査・分析 | 必要なときだけ`monetization.md`、`analytics-log.md` |
+| 画像・図解 | `AGENTS/common/image.md` |
 
-## magazines/ai-entertainment
-
-- 記事執筆: `AGENTS/magazines/ai-entertainment/article.md`
-- 通常回テンプレート・文章化依頼プロンプト: `AGENTS/magazines/ai-entertainment/weekly-template.md`
-- 収益化・トピックリサーチ: `AGENTS/magazines/ai-entertainment/monetization.md`
-- 分析ログ: `AGENTS/magazines/ai-entertainment/analytics-log.md`
-- サマリ（日本語）: `AGENTS/RULES.ja.md`
-
-補足
-- ルートの `AGENTS.md` は、Codex が参照する短いサマリです。詳細は本フォルダの各ファイルを参照してください。
-- 必要に応じて英訳を追加する場合は、原本（日本語）を優先し、差分が出ないよう同期してください。
+同じルールを複数箇所に複製せず、媒体固有の記述は各媒体フォルダ、共通の記述は`common/`に置きます。古いパスを見つけた場合は、作業前に参照先を現行パスへ直します。

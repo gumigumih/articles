@@ -8,9 +8,9 @@
 
 ## 確認した資料
 
-- `AGENTS/analytics-log.md`
-- `AGENTS/monetization.md`
-- `AGENTS/weekly-ai-note-prompt.md`
+- `AGENTS/magazines/ai-entertainment/analytics-log.md`
+- `AGENTS/magazines/ai-entertainment/monetization.md`
+- `AGENTS/magazines/ai-entertainment/weekly-template.md`
 - `note/20260827_ai-entertainment-night-01.md`
 - `note/20260831_ai-entertainment-night-02.md`
 - `note/20260901_announcement-first-week-review.md`

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article table to Gist"
+  short_description: "Extract article tables and manage Gists with review first"
+  default_prompt: "Use $article-table-gist to extract tables from an article and prepare or manage Gist links."

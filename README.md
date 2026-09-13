@@ -2,6 +2,40 @@
 
 このリポジトリは、私が執筆している技術記事やノウハウを管理するためのものです。Zenn や Qiita で公開している記事の一覧や、ローカルでの執筆環境についてまとめています。
 
+## 📁 ワークスペース構成
+
+このリポジトリを親レポジトリとして、媒体ごとのCLI用コンテンツをサブモジュールで管理します。
+
+```text
+articles/
+├── zenn/       # gumigumih/zenn-content
+├── qiita/      # gumigumih/qiita-content
+├── note/       # note本文・画像・投稿補助
+├── topics/     # 調査・企画メモ
+├── AGENTS/     # 共通の執筆ルール
+└── scripts/    # 媒体横断の補助ツール
+```
+
+初回取得時はサブモジュールも同時に取得します。
+
+```bash
+git clone --recurse-submodules https://github.com/gumigumih/articles.git
+```
+
+既にclone済みの場合は、次を実行してください。
+
+```bash
+git submodule update --init --recursive
+```
+
+依存関係は親と各子レポジトリで個別にインストールします。
+
+```bash
+npm install
+npm --prefix zenn install
+npm --prefix qiita install
+```
+
 ## 📝 記事公開先
 
 - 📚 Zenn: [https://zenn.dev/gumigumih](https://zenn.dev/gumigumih)
@@ -14,22 +48,22 @@ Zenn CLI を使用すると、ローカルで記事の執筆やプレビュー�
 ### 新しい記事の作成
 
 ```bash
-npx zenn new:article --slug <記事のスラッグ>
+npm run zenn:new -- --slug <記事のスラッグ>
 ```
 
-対話形式でタイトルや公開設定を入力すると、`articles/` フォルダ内に新しい Markdown ファイルが作成されます。
+対話形式でタイトルや公開設定を入力すると、`zenn/articles/` フォルダ内に新しい Markdown ファイルが作成されます。
 
 ### プレビュー実行
 
 ```bash
-npx zenn preview
+npm run zenn:preview
 ```
 
 ブラウザで `http://localhost:8000` にアクセスすると、リアルタイムでプレビューが確認できます。
 
 ### 記事の投稿
 
-Zenn では CLI からの直接投稿はできません。GitHub 連携を使って、`articles/` フォルダに Markdown ファイルを配置し、GitHub に Push することで記事が公開されます。
+Zenn では CLI からの直接投稿はできません。GitHub 連携先を`gumigumih/zenn-content`へ切り替え、`zenn/articles/`のMarkdownを子レポジトリへPushすることで記事が公開されます。
 
 詳細: [https://zenn.dev/zenn/articles/zenn-cli-guide](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
@@ -40,15 +74,15 @@ Qiita CLI は、ローカル環境で Qiita 記事の執筆、プレビュー、
 ### 新しい記事の作成
 
 ```bash
-npx qiita new <記事のファイル名>
+npm run qiita:new -- <記事のファイル名>
 ```
 
-このコマンドで `public/` ディレクトリ内に `<記事のファイル名>.md` が作成され、YAML 形式の Front Matter が自動的に挿入されます。
+このコマンドで `qiita/public/` ディレクトリ内に `<記事のファイル名>.md` が作成され、YAML 形式の Front Matter が自動的に挿入されます。
 
 ### プレビューの起動
 
 ```bash
-npx qiita preview
+npm run qiita:preview
 ```
 
 ブラウザで `http://localhost:8888` にアクセスすると、リアルタイムで記事のプレビューが確認できます。
@@ -56,30 +90,34 @@ npx qiita preview
 ### 記事の投稿
 
 ```bash
-npx qiita publish <記事のファイル名>
+npm run qiita:publish -- <記事のファイル名>
 ```
 
 または、すべての記事を一括で投稿・更新する場合：
 
 ```bash
-npx qiita publish --all
+npm run qiita:publish -- --all
 ```
 
-## 📊 note 管理画面
+QiitaのGitHub Actionsは`gumigumih/qiita-content`側で実行します。子レポジトリのActions Secretsに`QIITA_TOKEN`を設定してください。
 
-`note/` 配下の記事一覧、Gitの未追跡・削除状態、カバー画像の用意状況、note投稿記録を確認・編集する画面を起動できます。note公開状況は `https://note.com/gumigumih` の公開記事スナップショットと照合します（自動取得ではありません）。
+## 📊 note Article Manager
 
-```bash
-npm run note:dashboard
-```
+noteの記事管理は、Sites上の[note Article Manager](https://note-article-manager.megumi-love-ramen.chatgpt.site/)で行います。記事本文と画像の正本は親レポジトリの`note/`です。この画面からnote、X、Gitへの書き込みは行いません。
 
-ブラウザで `http://127.0.0.1:4310` を開いてください。プロフィール照合データを更新する場合は、公開プロフィールを確認したうえで次を実行します。
+## 📋 記事内の表をGistにする
 
-```bash
-npm run note:dashboard:build
-```
+記事内の表をGistとして管理するときは、プロジェクトSkillの`$article-table-gist`を使います。対象表、Gistの公開範囲、記事に反映する差分を確認してから、Gist作成・更新と記事ファイルの変更を実行します。GitHub CLIの認証を使うため、記事リポジトリにGist用トークンを保存しません。
 
-投稿記録はローカル画面では `note/posting-records.json` に、静的公開画面では利用中ブラウザのローカル保存領域に保存されます。この画面からnoteへの公開やGit操作は行いません。
+## ✍️ 執筆用Skill
+
+執筆・公開前レビューに使うSkillは、このプロジェクトの`.agents/skills/`で管理します。
+
+- `$gumi-writing-style`: ぐみ名義のnote記事の文体調整
+- `$article-general-content-check`: note・Qiita・Zenn・ブログ記事の一般向けレビュー
+- `$article-ai-entertainment-content-check`: 「AIとわたしの深夜エンタメ会議」専用レビュー
+
+日本語全般の診断・推敲に使う`natural-japanese`は、汎用Skillとして個人側に残します。
 
 ## 🛡️ Git Hooks のセットアップ
 
