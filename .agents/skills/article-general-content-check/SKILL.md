@@ -1,6 +1,6 @@
 ---
 name: article-general-content-check
-description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レビューと、明示依頼時のClaude CLI修正に使う。「AIとわたしの深夜エンタメ会議」は専用スキルを使う。"
+description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レビューと、明示依頼時のCodex文章作成に使う。「AIとわたしの深夜エンタメ会議」は専用スキルを使う。"
 ---
 
 # 一般記事向けコンテンツチェック
@@ -15,7 +15,7 @@ description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レ�
 
 ## 事前確認
 
-1. 対象記事と、対象リポジトリにある関連ルールを読む。articlesでは少なくとも `AGENTS/common/style.md`、`AGENTS/common/structure.md`、`AGENTS/common/quality.md`、`AGENTS/common/link.md`、`AGENTS/platforms/platform.md` を確認する。
+1. 対象記事と、対象リポジトリにある関連ルールを読む。articlesではまず`AGENTS/README.md`と`AGENTS/platforms/README.md`を確認し、媒体に応じて`AGENTS/platforms/note/README.md`、`AGENTS/platforms/zenn/README.md`、`AGENTS/platforms/qiita/README.md`のいずれかを読む。そのうえで少なくとも `AGENTS/common/style.md`、`AGENTS/common/structure.md`、`AGENTS/common/quality.md`、`AGENTS/common/link.md` を確認する。
 2. 直近の既存記事と候補履歴を読み、同じ体験・主張・タイトル型の重複を確認する。
 3. 下書きの出所を確認する。ユーザー本人の直接発言・実体験、他人の相談・意見、一般論、AIの推測を別々に扱う。出所が確認できない内容は「本人由来ではない／要確認」とする。
 
@@ -57,7 +57,9 @@ description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レ�
 
 ## 本文修正の委譲
 
-本文変更の明示依頼がある場合だけ、実行前に [Claude修正手順](references/claude-revision.md) を読む。レビューのみでは記事を編集せずCLIも実行しない。修正許可は投稿・画像生成・コミット・pushの許可を含まない。
+本文変更の明示依頼がある場合だけ、Codexの文章作成サブエージェントまたは文章作成用にモデルを切り替えたCodexタスクへ委譲する。入力資料と媒体固有ルールを渡し、サブエージェントは対象本文だけを編集する。独自のWeb検索、候補選定、投稿、画像生成、コミット、pushは行わない。指定モデルが呼び出し経路で利用できない場合は、別モデルへ黙って置き換えず、同じCodexタスクのモデル切り替えまたは別タスクで実行する。
+
+メインCodexは完了後に差分、事実、出所、URLを確認し、記事に適用できるすべてのチェック用skillを実施する。レビューのみでは記事を編集せず、文章化環境も起動しない。修正許可は投稿・画像生成・コミット・pushの許可を含まない。
 
 ## 守ること
 
