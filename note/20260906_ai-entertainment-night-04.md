@@ -2,6 +2,7 @@
 title: "Astraは制作ソフトを動かす相棒になるか｜AIとわたしの深夜エンタメ会議 #4"
 note_hashtags: "#生成AI #ChatGPT #AIエンタメ #ゲーム制作 #イラスト #AI音楽 #AIとわたしの深夜エンタメ会議"
 date: 2026-09-06
+note_id: "n2081b75fce91"
 ---
 
 ![CoverImage](./images/20260906_ai-entertainment-night-04/cover.png)
