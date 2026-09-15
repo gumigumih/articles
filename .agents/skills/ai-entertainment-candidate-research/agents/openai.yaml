@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Entertainment Candidate Research"
+  short_description: "AIエンタメ記事候補を調査・比較し、掲載順まで推薦"
+  default_prompt: "Use $ai-entertainment-candidate-research to research and propose article candidates for the magazine."
