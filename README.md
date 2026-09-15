@@ -116,6 +116,8 @@ noteの記事管理は、Sites上の[note Article Manager](https://note-article-
 - `$gumi-writing-style`: ぐみ名義のnote記事の文体調整
 - `$article-general-content-check`: note・Qiita・Zenn・ブログ記事の一般向けレビュー
 - `$article-ai-entertainment-content-check`: 「AIとわたしの深夜エンタメ会議」専用レビュー
+- `$ai-entertainment-candidate-research`: 同マガジンの記事候補調査・比較・掲載順の提案
+- `$ai-entertainment-article-package`: 選択済み候補から本文レビューとおまけスライド生成を一括実行
 
 日本語全般の診断・推敲に使う`natural-japanese`は、汎用Skillとして個人側に残します。
 
