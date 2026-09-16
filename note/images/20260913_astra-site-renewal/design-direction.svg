@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1800" role="img" aria-labelledby="title desc">
+  <title id="title">meg+gumi redesign direction</title>
+  <desc id="desc">A vertical website mockup with strong Japanese typography, a fine grid, slate colors, pink and amber accents, services and works sections.</desc>
+  <defs>
+    <linearGradient id="slate" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#667386"/><stop offset="1" stop-color="#445062"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f18aba"/><stop offset="1" stop-color="#e764a5"/></linearGradient>
+  </defs>
+  <rect width="1200" height="1800" fill="#fff"/>
+  <rect x="34" y="34" width="1132" height="1732" rx="4" fill="#fff" stroke="#d7dde4" stroke-width="2"/>
+  <g font-family="Arial, Hiragino Sans, Yu Gothic, sans-serif" fill="#0f172a">
+    <text x="78" y="100" font-size="24" font-weight="700">meg+gumi</text>
+    <text x="760" y="100" font-size="13" letter-spacing="2">HOME　 SERVICES　 WORKS　 ABOUT　 CONTACT</text>
+    <path d="M78 132H1122" stroke="#cbd5e1"/>
+
+    <text x="78" y="202" font-size="14" fill="#64748b" letter-spacing="3">DESIGN DIRECTION / B案 + 現行カラー</text>
+    <text x="78" y="310" font-size="70" font-weight="800">必要なところに入り、</text>
+    <text x="78" y="392" font-size="70" font-weight="800">Web開発を前へ。</text>
+    <text x="82" y="446" font-size="18" fill="#64748b">制作・開発を、必要な範囲からスポットで支援します。</text>
+    <rect x="80" y="492" width="160" height="52" rx="26" fill="#ec4899"/>
+    <text x="112" y="525" font-size="16" fill="#fff" font-weight="700">仕事を相談する</text>
+    <text x="80" y="583" font-size="14" fill="#64748b">SCROLL TO EXPLORE　↓</text>
+
+    <rect x="760" y="190" width="362" height="480" fill="#f5f7f9"/>
+    <rect x="760" y="190" width="168" height="296" fill="#e5e9ee"/>
+    <rect x="990" y="190" width="132" height="200" fill="#c2cad4"/>
+    <rect x="928" y="274" width="62" height="116" fill="url(#pink)"/>
+    <rect x="804" y="390" width="124" height="96" fill="#d2d8df"/>
+    <rect x="928" y="390" width="62" height="96" fill="url(#slate)"/>
+    <rect x="990" y="390" width="132" height="96" fill="#e6ebef"/>
+    <rect x="760" y="486" width="168" height="184" fill="url(#slate)"/>
+    <rect x="928" y="486" width="194" height="184" fill="#f0f3f5"/>
+    <g stroke="#b9c4d0" stroke-width="2" fill="none"><path d="M928 190V670M990 190V670M804 282V486M760 354H928M760 486H1122M760 535H1122M760 600H1122M1080 450V630M990 450H1122"/></g>
+    <rect x="1080" y="450" width="34" height="36" fill="#f5a900"/>
+    <text x="1089" y="476" font-size="12" fill="#fff" font-weight="700">+</text>
+
+    <path d="M78 732H1122" stroke="#cbd5e1"/>
+    <text x="78" y="795" font-size="14" fill="#64748b" letter-spacing="3">SERVICES</text>
+    <text x="78" y="858" font-size="38" font-weight="800">必要なところから、開発を前へ。</text>
+    <g stroke="#cbd5e1" fill="#fff">
+      <rect x="78" y="908" width="318" height="176"/><rect x="421" y="908" width="318" height="176"/><rect x="764" y="908" width="358" height="176"/>
+    </g>
+    <g font-size="19" font-weight="700"><text x="106" y="960">01　フロントエンド実装</text><text x="449" y="960">02　バックエンド開発</text><text x="792" y="960">03　Web制作・開発支援</text></g>
+    <g font-size="14" fill="#64748b"><text x="106" y="1002">画面設計から、使えるUIまで。</text><text x="449" y="1002">APIやデータ処理を、必要な範囲で。</text><text x="792" y="1002">チームの中に入り、前へ進めます。</text></g>
+
+    <path d="M78 1164H1122" stroke="#cbd5e1"/>
+    <text x="78" y="1227" font-size="14" fill="#64748b" letter-spacing="3">SELECTED WORKS</text>
+    <text x="78" y="1290" font-size="38" font-weight="800">つくったもの、試したこと。</text>
+    <g stroke="#cbd5e1" fill="#f5f7f9"><rect x="78" y="1340" width="250" height="180"/><rect x="350" y="1340" width="250" height="180"/><rect x="622" y="1340" width="250" height="180"/><rect x="894" y="1340" width="228" height="180"/></g>
+    <g fill="#64748b" font-size="13"><text x="98" y="1570">EXIF Copy Tool</text><text x="370" y="1570">わりまる / わけたべ</text><text x="642" y="1570">React電卓入力フォーム</text><text x="914" y="1570">DHU ビジョンブック</text></g>
+    <path d="M78 1640H1122" stroke="#cbd5e1"/>
+    <text x="78" y="1700" font-size="14" fill="#64748b" letter-spacing="3">MEG+GUMI / PORTFOLIO</text>
+    <text x="930" y="1700" font-size="14" fill="#64748b">DESIGN MOCKUP</text>
+  </g>
+</svg>
