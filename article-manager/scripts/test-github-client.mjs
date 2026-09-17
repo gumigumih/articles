@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+import {readFileSync} from 'node:fs';
+const source=ts.transpile(readFileSync('lib/github-client.ts','utf8'),{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022});
+const {githubClient}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const logs=[];console.error=(...a)=>logs.push(a.join(' '));
+const api='https://api.github.com/repos/gumigumih/articles';
+globalThis.fetch=async()=>Response.json({message:'API rate limit exceeded'},{status:403,headers:{'x-ratelimit-remaining':'0','x-ratelimit-reset':String(Math.floor(Date.now()/1000)+3600)}});
+await assert.rejects(githubClient()(api),e=>e.code==='rate_limited'&&!!e.retryAt&&e.message.includes('未設定'));
+globalThis.fetch=async()=>new Response('Forbidden',{status:403});
+await assert.rejects(githubClient()(api),e=>e.code==='access_denied'&&e.retryAt===null);
+globalThis.fetch=async()=>Response.json({message:'Bad credentials'},{status:401});
+await assert.rejects(githubClient('secret')(api),e=>e.code==='authentication_failed');
+globalThis.fetch=async(url,options)=>{assert.equal(options.headers.Authorization,url===api?'Bearer secret':undefined);return Response.json({ok:true})};
+await githubClient('secret')(api);await githubClient('secret')('https://raw.githubusercontent.com/gumigumih/articles/main/README.md');
+assert.ok(!logs.join('').includes('secret'));
+console.log('PASS: rate limit vs access denial, retry time, auth failure, token limited to API host, secret-free logs.');

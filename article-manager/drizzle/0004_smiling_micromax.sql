@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `articles_source_path_unique` ON `articles` (`source_path`) WHERE "articles"."source_path" <> '';
