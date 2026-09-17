@@ -1,4 +1,4 @@
 interface:
-  display_name: "AI Entertainment Article Package"
+  display_name: "Article: AI Entertainment Article Package"
   short_description: "選択したAIエンタメ候補から記事本文とおまけスライドを一括作成"
   default_prompt: "Use $ai-entertainment-article-package to create the selected magazine article and its appendix slides."

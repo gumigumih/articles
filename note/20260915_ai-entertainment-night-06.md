@@ -2,6 +2,7 @@
 title: "AIはキャラクターとの会話をどう変える？｜AIとわたしの深夜エンタメ会議 #06"
 note_hashtags: "#AIエンタメ #生成AI #AIチャット #ゲーム #音楽 #動画制作"
 date: 2026-09-15
+note_id: "nafd2df3aa8cb"
 ---
 
 ![CoverImage](./images/20260915_ai-entertainment-night-06/cover.png)
