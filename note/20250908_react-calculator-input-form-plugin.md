@@ -142,7 +142,7 @@ date: 2025-09-08
 
 - [npmパッケージ](https://www.npmjs.com/package/@gumigumih/react-calculator-input-form)
 - [GitHubリポジトリ](https://github.com/gumigumih/react-calculator-input-form)
-- [わりまる（複数人での支払い割り勘）](https://meggumi.com/warimaru/)
+- [わりまる（複数人での支払い割り勘）](https://warimaru.meggumi.com/)
 - [わけたべ（料理ごとの詳細割り勘）](https://waketabe.meggumi.com/)
 
 ---
