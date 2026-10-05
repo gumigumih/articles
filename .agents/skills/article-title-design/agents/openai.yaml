@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article: Title Design"
+  short_description: "記事タイトルを媒体と読者に合わせて設計・比較・改善する"
+  default_prompt: "Use $article-title-design to design and review article titles with evidence-backed criteria."

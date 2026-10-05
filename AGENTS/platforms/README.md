@@ -12,6 +12,7 @@
 ## 作業別の追加ルール
 
 - 本文の新規作成・改稿: 記事種別に対応するチェック用skillをすべて適用する。
+- タイトルの新規作成・大幅な改善: `article-title-design`を追加で使い、媒体別の読者価値と本文の期待値を確認する。
 - noteの公開前確認: `article-general-content-check`、または深夜エンタメ会議なら`article-ai-entertainment-content-check`を使う。
 - `*.x-post.md`、`*.cover-prompt.md`などの付属ファイル: 本文記事のフロントマターや`note_id`を付けない。
 - 投稿、画像生成、コミット、push: 記事の文章化・レビューとは別の明示依頼として扱う。
