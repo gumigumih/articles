@@ -11,6 +11,13 @@
     "zenn:new": "npm --prefix zenn run new",
     "zenn:preview": "npm --prefix zenn run preview",
     "convert:zenn-to-qiita": "node scripts/convert-zenn-to-qiita.js",
+    "note:validate": "node scripts/note-draft.mjs validate",
+    "note:prepare": "node scripts/note-draft.mjs prepare",
+    "note:cover-prompt": "node scripts/note-draft.mjs cover-prompt",
+    "note:draft": "node scripts/note-draft.mjs draft",
+    "note:login": "node scripts/note-draft.mjs login",
+    "note:update": "node scripts/note-draft.mjs update",
+    "note:publish": "node scripts/note-draft.mjs publish",
     "postinstall": "./scripts/setup-git-hooks.sh"
   },
   "repository": {
@@ -31,6 +38,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "open-cli": "^8.0.0"
+    "open-cli": "^8.0.0",
+    "playwright": "^1.63.0"
   }
 }
