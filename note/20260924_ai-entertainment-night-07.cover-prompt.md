@@ -1,36 +1,23 @@
-添付した画像と同じスタイルで、note有料記事のカバー画像を作成してください。
+# ゼロベース・カバー画像プロンプト
 
-【マガジン名】
-AIとわたしの深夜エンタメ会議
+再生成時に参照画像を使わず、毎回ゼロから作るためのプロンプトです。固定配色やシリーズ共通の号数デザインは指定しません。
 
-【号数】
-#07
+```text
+Use case: ads-marketing
+Asset: standalone Japanese note article cover, landscape 1.91:1
+Input images: none. Generate from this brief alone.
 
-【日付】
-2026.09.27
+Create a visually substantial editorial cover for the article:
+「Jevから考える、「判断専用AI」をゲームと制作工程へ組み込む設計」
 
-【記事タイトル】
-Jevから考える、「判断専用AI」をゲームと制作工程へ組み込む設計
+The article looks at a judgment-oriented AI through four use cases, from email classification to conversation games. Express structured decisions moving into different creative or service outcomes: a message is classified, a branch is selected, and a game or workflow continues. Use an original visual metaphor such as branching paths, sorted cards, or a decision map. Do not reproduce a real product interface.
 
-【サブコピー】
-Jevの判定とGemini TTSの声を、作品づくりにどう使う？
-DLできる分析スライド付き
+Text (verbatim):
+「Jevから考える、「判断専用AI」をゲームと制作工程へ組み込む設計」
 
-【画像内の文字】
-マガジン名は「AIとわたしの深夜エンタメ会議」、号数は「#07」、日付は「2026.09.27」と正確に入れる。調査期間は入れない。
+Make the Japanese title very large, accurate, and readable at thumbnail size. Put the title in the foreground with strong hierarchy and intentional line breaks. Preserve the feeling of a thoughtful but practical design question, with an energetic composition and meaningful visual detail.
 
-メインタイトルは、文言を省略せず次の3行で配置する。
-Jevから考える、
-「判断専用AI」をゲームと
-制作工程へ組み込む設計
+Choose the palette, medium, background, and composition independently. Dimensional graphic forms, branching paths, cards, or editorial collage are allowed when they support the idea. Do not force a particular color scheme.
 
-サブコピーは1行目を「Jevの判定とGemini TTSの声を、作品づくりにどう使う？」、2行目を「DLできる分析スライド付き」とする。メインタイトルを最も大きくし、特に「判断専用AI」が目に入るようにする。サブコピーは控えめに配置し、スマートフォンの一覧でもタイトルが読める文字サイズと余白を確保する。文字化けや誤字を避ける。
-
-【ビジュアル】
-シリーズ共通カバーの固定フォーマットをそのまま使う。夜空、星、三日月、筆文字風のタイトル、カラフルなアクセント、下部の光る折れ線、深夜の作業机という基本構成を維持する。記事内容に合わせたニュース、サービス、キャラクター、UIの追加描写やレイアウト変更はしない。
-
-【雰囲気・配色】
-夜の濃紺、黒に近い青、暖色のオレンジと淡いピンク。筆文字のようなタイトル表現。チャートの折れ線、吹き出し、星空、号数バッジと日付を入れる。
-
-【避けるもの】
-実在キャラクターの顔や衣装の再現、企業ロゴ、特定サービスのUI完全再現、過度にSF的なロボット、文字の崩れ、タイトルの誤字。
+No reference images. No series name, issue number, extra slogans, tiny decorative text, invented logo, characters, people, robots, or copied brand UI. Avoid generic circuit-board imagery, dense dots, unreadable microtext, and a presentation mockup.
+```

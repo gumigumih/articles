@@ -1,51 +1,23 @@
-# カバー画像プロンプト
+# ゼロベース・カバー画像プロンプト
 
-note有料記事のカバー画像を作成してください。
+再生成時に参照画像を使わず、毎回ゼロから作るためのプロンプトです。固定配色やシリーズ共通の号数デザインは指定しません。
 
-【マガジン名】
+```text
+Use case: ads-marketing
+Asset: standalone Japanese note article cover, landscape 1.91:1
+Input images: none. Generate from this brief alone.
 
-AIとわたしの深夜エンタメ会議
+Create a visually substantial editorial cover for the article:
+「ChatGPT Images 2.5は、制作工程をつなぐAIになった」
 
-【号数】
+The article follows twenty use cases across games, video, and advertising, focusing on where image generation is useful and where it breaks down. Show images or visual ideas moving through a practical creative pipeline: drafting, revising, checking, and handing work to the next stage. Make the cover feel curious and useful rather than like a generic AI advertisement. Use original visual materials, not screenshots or recognizable existing artwork.
 
-#05
+Text (verbatim):
+「ChatGPT Images 2.5は、制作工程をつなぐAIになった」
 
-【日付】
+Make the Japanese title very large, accurate, and readable at thumbnail size. Put the title in the foreground with strong hierarchy and intentional line breaks. The visual should have a clear hook and enough detail to make the reader want to know the twenty examples.
 
-2026.09.10
+Choose the palette, medium, background, and composition independently. A dimensional editorial collage, creative desk, image sequence, or broad graphic flow is allowed when it supports the theme. Do not force a particular color scheme.
 
-【タイトル】
-
-ChatGPT Images 2.5は、制作工程をつなぐAIになった
-
-【サイズ】
-
-1280 × 670 px
-
-【表現したいモチーフ】
-
-夜の制作机に、ドット絵のゲームスプライト、連番のストップモーション、Blender風のワイヤーフレーム、広告レイアウトの断片が浮かぶ。人の手はラフスケッチを持ち、青紫の光を帯びた小さなオリジナルのキツネ型アシスタントが、半透明の3枚の制作パネルを左から右へ整理している。一本の光のラインで「画像を直して次工程へ渡す」流れを表現する。特定企業のロゴ、実在人物、既存キャラクターは描かない。
-
-【スタイル参考】
-
-- タイトルは筆文字っぽい、勢いのある手書き風の太い文字
-- 背景は濃紺から紫の夜空。小さな星を散りばめる
-- 右上に三日月
-- タイトルの近くに「…」「♡」などの吹き出しをアクセントとして配置
-- 下部に、点を結んだ折れ線を青紫とピンクで光る線として描く
-- 配色はネイビーの背景に、白、イエロー、青紫、ピンク
-- マガジン名は左上、記事タイトルは左下寄りに大きく置く
-- 号数バッジのすぐ近くに日付を小さく添える
-
-【目的】
-
-noteの一覧で小さく表示されても、画像を生成して終わりではなく、ゲーム・映像・3D・広告の制作工程へ渡す記事だと伝わる。派手な広告ではなく、作り手が読みたくなる信頼感を出す。
-
-【NG】
-
-- 小さい文字を多く入れる
-- 情報を詰め込みすぎる
-- 既存のゲーム、音楽、キャラクターを連想させる固有の素材
-- 未来都市だけを描いた抽象的なAI画像
-- 派手すぎる広告バナー風
-- 指定外の読める文字、実在人物、既存ブランドのロゴ
+No reference images. No series name, issue number, extra slogans, tiny decorative text, invented logo, characters, people, robots, or copied brand UI. Avoid generic circuit-board imagery, fantasy scenery used only as decoration, dense dots, unreadable microtext, and a presentation mockup.
+```

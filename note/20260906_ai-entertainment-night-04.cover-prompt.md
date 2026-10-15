@@ -1,42 +1,23 @@
-# カバー画像プロンプト
+# ゼロベース・カバー画像プロンプト
+
+再生成時に参照画像を使わず、毎回ゼロから作るためのプロンプトです。固定配色やシリーズ共通の号数デザインは指定しません。
 
 ```text
-添付した画像と同じスタイルで、note有料記事のカバー画像を作成してください。
+Use case: ads-marketing
+Asset: standalone Japanese note article cover, landscape 1.91:1
+Input images: none. Generate from this brief alone.
 
-【マガジン名】
-AIとわたしの深夜エンタメ会議
+Create a visually substantial editorial cover for the article:
+「Astraは制作ソフトを動かす相棒になるか」
 
-【号数】
-#4
+The article examines GPT-6 Astra through eighteen creative production examples across games, illustration, and music, asking whether work can be delegated and corrected later. Suggest a connected creative workspace: multiple forms of making becoming editable, revisable, and usable in a real workflow. Use original abstract production materials or graphic forms, not screenshots of a real product and not a particular company's interface.
 
-【日付】
-2026.09.06
+Text (verbatim):
+「Astraは制作ソフトを動かす相棒になるか」
 
-【タイトル】
-Astraは制作ソフトを動かす相棒になるか
+Make the Japanese title very large, accurate, and readable at thumbnail size. Put the title in the foreground with strong hierarchy and intentional line breaks. Give the visual a clear sense of motion and production, with enough richness to invite reading.
 
-【サイズ】
-1280 × 670 px
+Choose the palette, medium, background, and composition independently. Dimensional creative materials, broad color fields, screens, tools, or editorial collage are allowed when they support the theme. Do not force a particular color scheme.
 
-【表現したいモチーフ】
-夜の制作机に、ゲーム画面、ピクセルアート用の小さなグリッド、音楽の波形、Webページの断片が浮かぶ。人の手はラフスケッチを持ち、青緑の光を帯びた小さなアシスタントが複数の制作画面を整理している。特定企業のロゴ、実在人物、既存キャラクターは描かない。
-
-【スタイル参考】
-・タイトルは筆文字っぽい、勢いのある手書き風の太い文字
-・背景は濃紺から紫の夜空。小さな星を散りばめる
-・右上に三日月
-・タイトルの近くに「…」「♡」などの吹き出しをアクセントとして配置
-・下部に、点を結んだ折れ線を光る線で描く
-・配色はネイビーの背景に、白、イエロー、青緑、ピンク
-・号数バッジのすぐ近くに日付を小さく添える
-
-【目的】
-noteの一覧で小さく表示されても、制作工程をテーマにした記事だと伝わる。派手な広告ではなく、作り手が読みたくなる信頼感を出す。
-
-【NG】
-・小さい文字を多く入れる
-・情報を詰め込みすぎる
-・既存のゲーム、音楽、キャラクターを連想させる固有の素材
-・未来都市だけを描いた抽象的なAI画像
-・派手すぎる広告バナー風
+No reference images. No series name, issue number, extra slogans, tiny decorative text, invented logo, characters, people, robots, or copied brand UI. Avoid generic circuit-board imagery, dense dots, unreadable microtext, and a presentation mockup.
 ```
