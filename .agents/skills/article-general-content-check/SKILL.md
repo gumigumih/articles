@@ -1,6 +1,6 @@
 ---
 name: article-general-content-check
-description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レビューと、明示依頼時のCodex文章作成に使う。「AIとわたしの深夜エンタメ会議」は専用スキルを使う。"
+description: "一般向けnote・Qiita・Zenn・ブログ記事の公開前レビューと、明示依頼時のCodex文章作成に使う。"
 ---
 
 # 一般記事向けコンテンツチェック

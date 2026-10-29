@@ -1,4 +1,0 @@
-interface:
-  display_name: "Article: AI Entertainment Slides"
-  short_description: "ブラッシュアップ後の記事から、明示依頼でスライドを作成・検証"
-  default_prompt: "Use $ai-entertainment-slides to create or revise slides from the specified, brushed-up AI entertainment article. Leave the article unchanged unless I also request image or attachment-link updates."

@@ -193,7 +193,7 @@ note固有の挿入物は、Markdown原稿内の位置をそのままnote上の�
 
 `note:file`はファイル添付、`note:audio`は音声投稿、`note:comic`はコミック作成、`note:toc`は目次挿入として処理します。ファイル・音声・コミックの参照先は、本文中でも読めるMarkdownリンク形式で記述します。
 
-`--save`を付けない限り、note側の保存や原稿の`note_id`更新は行いません。公開操作は別コマンドです。下書きの公開設定を原稿のタグ・料金と照合し、指定先のメンバーシップやマガジンへ追加して公開する場合は`note:publish`を使います。公開操作と設定変更には`--confirm`が必要です。深夜エンタメ会議の記事はマガジン追加なし、メンバーシップ「スタンダードプラン」を既定にします。
+`--save`を付けない限り、note側の保存や原稿の`note_id`更新は行いません。公開操作は別コマンドです。下書きの公開設定を原稿のタグ・料金と照合し、指定先のメンバーシップやマガジンへ追加して公開する場合は`note:publish`を使います。公開操作と設定変更には`--confirm`が必要です。
 
 ```bash
 npm run note:publish -- note/<有料記事>.md --price <円> --confirm
@@ -213,13 +213,6 @@ npm run note:publish -- note/<無料記事>.md --free --magazine '<マガジン�
 - `$gumi-writing-style`: ぐみ名義のnote記事の文体調整
 - `$article-general-content-check`: note・Qiita・Zenn・ブログ記事の一般向けレビュー
 - `$article-title-design`: note・Zenn・ブログ記事のタイトル設計・候補比較
-- `$article-ai-entertainment-content-check`: 「AIとわたしの深夜エンタメ会議」専用レビュー
-- `$ai-entertainment-candidate-research`: 同マガジンの記事候補調査・比較・掲載順の提案
-- `$ai-entertainment-article-package`: 選択済み候補から記事初稿とチェック結果を作成し、ブラッシュアップ前に停止
-- `$ai-entertainment-slides`: ブラッシュアップ後、明示依頼を受けて最新版の記事からスライドを作成・検証
-
-同マガジンは「記事作成 → ブラッシュアップ（手動）→ スライド作成」の順に進めます。本文チェックに合格してもスライドは自動生成しません。「この本文でスライドを作って」と依頼するか、`$ai-entertainment-slides`で対象記事を指定してください。
-
 日本語全般の診断・推敲に使う`natural-japanese`は、汎用Skillとして個人側に残します。
 
 ## 🛡️ Git Hooks のセットアップ

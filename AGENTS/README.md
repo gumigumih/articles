@@ -14,7 +14,6 @@
 - 全媒体共通: `AGENTS/common/README.md`
 - 媒体別の入口と正本: `AGENTS/platforms/{note,zenn,qiita}/README.md`
 - note一般記事: `AGENTS/platforms/note/general-note.md`
-- noteマガジン固有: `AGENTS/magazines/ai-entertainment/`
 
 ## 読み分け
 
@@ -22,7 +21,6 @@
 | --- | --- |
 | 本文を新規作成・改稿 | 記事種別に対応するチェック用skillをすべて適用 |
 | noteのフロントマター確認 | `AGENTS/platforms/note/README.md` |
-| 通常回のマガジン記事 | `article.md` + `weekly-template.md` |
 | 収益化・候補調査・分析 | 必要なときだけ`monetization.md`、`analytics-log.md` |
 | 画像・図解 | `AGENTS/common/image.md` |
 

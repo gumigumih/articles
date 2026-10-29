@@ -1405,13 +1405,12 @@ async function runPublish(options) {
     throw new Error('--priceは100〜50000の整数で指定してください');
   }
 
-  const isMagazineArticle = /ai-entertainment-night/i.test(articlePath);
   const magazine = options.noMagazine ? null : options.magazine || null;
-  const membershipPlan = options.noMembership ? null : options['membership-plan'] || (isMagazineArticle ? 'スタンダードプラン' : null);
+  const membershipPlan = options.noMembership ? null : options['membership-plan'] || null;
   if ((options.noMagazine && options.magazine) || (options.noMembership && options['membership-plan'])) {
     throw new Error('--no-magazine/--no-membershipと追加先の指定は併用できません');
   }
-  if (!magazine && !options.noMagazine && !isMagazineArticle) throw new Error('追加するマガジン名か--no-magazineを指定してください');
+  if (!magazine && !options.noMagazine) throw new Error('追加するマガジン名か--no-magazineを指定してください');
   if (!membershipPlan && !options.noMembership) throw new Error('追加するプラン名か--no-membershipを指定してください');
   if (!options.confirm) {
     throw new Error('外部設定と記事公開を実行するには--confirmが必要です（公開設定: --confirmなしでは開きません）');

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Article: AI Entertainment Writing"
-  short_description: "選択済みのAIエンタメ候補から記事初稿とチェック結果を作成"
-  default_prompt: "Use $ai-entertainment-article-package to draft and check the selected magazine article, then stop for my manual refinement. Do not create slides."

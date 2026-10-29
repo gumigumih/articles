@@ -2,7 +2,7 @@
 
 ## 適用対象
 
-`note/`配下の本文記事に適用します。`*.x-post.md`、`*.cover-prompt.md`、調査メモなどの付属ファイルには、本文用のフロントマターや`note_id`を付けません。一般記事は`general-note.md`、有料マガジン「AIとわたしの深夜エンタメ会議」は`AGENTS/magazines/ai-entertainment/article.md`を追加で読みます。
+`note/`配下の本文記事に適用します。`*.x-post.md`、`*.cover-prompt.md`、調査メモなどの付属ファイルには、本文用のフロントマターや`note_id`を付けません。一般記事は`general-note.md`を追加で読みます。
 
 ## 読む順番
 
