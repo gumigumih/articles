@@ -5,7 +5,7 @@ date: 2026-09-27
 note_id: "n9a57db56c1ae"
 ---
 
-![CoverImage](images/20260924_ai-entertainment-night-07/cover-selected.png)
+![CoverImage](images/20260924_jev-judgment-ai-use-cases/cover-selected.png)
 
 # 判断専用AI「Jev」の活用事例4選——メール分類から会話ゲームまで
 

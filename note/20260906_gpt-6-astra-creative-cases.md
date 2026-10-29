@@ -5,7 +5,7 @@ date: 2026-09-06
 note_id: "n2081b75fce91"
 ---
 
-![CoverImage](images/20260906_ai-entertainment-night-04/cover-selected.png)
+![CoverImage](images/20260906_gpt-6-astra-creative-cases/cover-selected.png)
 
 # GPT-6 Astraの制作事例18選——ゲーム・絵・音楽を任せて、あとで直せる？
 

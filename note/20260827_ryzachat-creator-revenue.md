@@ -5,7 +5,7 @@ date: 2026-08-28
 note_id: "nf5fee2e2f291"
 ---
 
-![CoverImage](images/20260827_ai-entertainment-night-01/cover-selected.png)
+![CoverImage](images/20260827_ryzachat-creator-revenue/cover-selected.png)
 
 # ライザと話すお金が、作り手にも戻る？ クリエイターへの還元を掲げるAIの仕組み
 

@@ -5,7 +5,7 @@ date: 2026-09-10
 note_id: "na2a7ecc7a724"
 ---
 
-![CoverImage](images/20260910_ai-entertainment-night-05/cover-selected.png)
+![CoverImage](images/20260910_chatgpt-images-2-5-use-cases/cover-selected.png)
 
 # ChatGPT Images 2.5の活用事例20選——ゲーム・映像・広告の使いどころと落とし穴
 
