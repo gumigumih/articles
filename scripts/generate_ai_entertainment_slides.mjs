@@ -47,7 +47,7 @@ const article = parseArticle(markdown, articleSlug, date);
 const membershipUrl = "https://note.com/gumigumih/membership";
 const membershipQrPath = path.join(WORKSPACE_DIR, "note/images/20260915_ai-entertainment-night-06/membership-qr.png");
 const coverImagePath = path.join(WORKSPACE_DIR, "note/images/20260915_ai-entertainment-night-06/slide-theme-cover.png");
-const generatedSlidePaths = Array.from({ length: 6 }, (_, index) => path.join(WORKSPACE_DIR, "note/images/20260924_ai-entertainment-night-07/generated", `slide-0${index + 1}.png`));
+const generatedSlidePaths = Array.from({ length: 6 }, (_, index) => path.join(WORKSPACE_DIR, "note/images/20260924_jev-judgment-ai-use-cases/generated", `slide-0${index + 1}.png`));
 const [membershipQrBytes, coverImageBytes] = await Promise.all([
   fs.readFile(membershipQrPath),
   fs.readFile(coverImagePath),
