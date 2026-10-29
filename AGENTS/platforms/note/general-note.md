@@ -31,3 +31,4 @@
 - 不足情報は「要確認」と明記する。
 - 投稿前に`AGENTS/common/quality.md`、`AGENTS/common/structure.md`、`AGENTS/common/link.md`を確認する。
 - ハッシュタグ、カバー画像、X投稿文などの付属成果物は、依頼または該当ルールで指定された場合だけ作成する。
+- カバー画像のプロンプトを作成するときは、`AGENTS/common/image.md`の「note記事カバーの既定プロンプト」を使う。ユーザーが別のデザインを指定した場合はその指示を優先する。
