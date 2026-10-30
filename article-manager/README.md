@@ -1,4 +1,8 @@
-# vinext-starter
+# Article inventory API (legacy)
+
+The management screen has been removed. Markdown remains the source of truth. Article backups use the existing Notion plugin as described in `../docs/notion-backup.md`; this service is not required.
+
+Existing inventory and analytics APIs are preserved. The rest of this README describes the underlying Sites starter. No hosting or database changes have been applied.
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 

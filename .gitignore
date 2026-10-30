@@ -10,3 +10,6 @@ gist-records.json
 
 # 一時ファイル
 temp/
+
+# Retired Notion workflow: preserve private snapshots, journal and disabled receiver configuration
+.notion-workflow/
