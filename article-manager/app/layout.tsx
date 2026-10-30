@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
-
 export const metadata: Metadata = {
-  title: "note Article Manager",
-  description: "Gitで管理するnote記事の棚卸し・公開状況・運用実績を確認する個人用管理画面。",
-  icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-  },
+  title: "Article inventory API",
+  description: "記事の棚卸し・公開情報・分析値を管理するAPI。",
 };
 
 export default function RootLayout({

@@ -101,13 +101,13 @@ npm run qiita:publish -- --all
 
 QiitaのGitHub Actionsは`gumigumih/qiita-content`側で実行します。子レポジトリのActions Secretsに`QIITA_TOKEN`を設定してください。
 
-## 📊 note Article Manager
+## 📝 Notionへの記事バックアップ
 
-noteの記事管理は、Sites上の[note Article Manager](https://note-article-manager.megumi-love-ramen.chatgpt.site/)で行います。記事本文と画像の正本は親レポジトリの`note/`です。この画面からnote、X、Gitへの書き込みは行いません。
+記事の正本はリポジトリのMarkdownと画像です。Codexで執筆・改善した記事を、既存NotionプラグインでNotionにも保存します。[保存手順](docs/notion-backup.md)を参照してください。ボタン・常駐受付・専用CLI・定期監視・LLM APIは使いません。note等への公開・コミット・pushは個別の明示依頼で行います。
 
 ## 📝 note下書きの準備
 
-note記事は、Markdown原稿と`note/images/`の画像を正本にします。カバー画像はフロントマター直後に`![CoverImage](images/<記事スラッグ>/cover.png)`として置き、有料エリアは次のコメントで区切ります。
+note記事は、Markdown原稿と`note/images/`の画像を正本にします。Notionへのバックアップと、noteへの下書き保存・公開準備は別の操作です。カバー画像はフロントマター直後に`![CoverImage](images/<記事スラッグ>/cover.png)`として置き、有料エリアは次のコメントで区切ります。
 
 ```markdown
 ![CoverImage](./images/<記事スラッグ>/cover.png)
