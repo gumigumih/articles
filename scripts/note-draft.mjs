@@ -51,6 +51,7 @@ function usage() {
   --manifest <file>        draftで利用するmanifest.json
   --url <url>              noteエディタURL
   --profile <dir>          Playwrightのログイン保持用プロファイル
+  --chrome-profile <name>  Chrome user-data-dir内のプロファイル名
   --preset <name>          カバープロンプトの種類（site-renewal|generic）
   --login                  未ログイン時にログイン完了まで待機します
   --login-timeout <ms>     ログイン待機時間（既定: 300000）
@@ -79,7 +80,7 @@ function parseArgs(argv) {
   const options = { state: 'draft' };
   const positional = [];
   const valueOptions = new Set([
-    '--state', '--out', '--manifest', '--url', '--profile', '--preset', '--login-timeout', '--price', '--magazine', '--membership-plan',
+    '--state', '--out', '--manifest', '--url', '--profile', '--chrome-profile', '--preset', '--login-timeout', '--price', '--magazine', '--membership-plan',
   ]);
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -567,9 +568,17 @@ function renderMarkdown(body) {
 
     if (/^[-*]\s+/.test(line)) {
       const items = [];
-      while (index < lines.length && /^[-*]\s+/.test(lines[index])) {
-        items.push(`<li>${renderInline(lines[index].replace(/^[-*]\s+/, ''))}</li>`);
-        index += 1;
+      while (index < lines.length) {
+        if (/^[-*]\s+/.test(lines[index])) {
+          items.push(`<li>${renderInline(lines[index].replace(/^[-*]\s+/, ''))}</li>`);
+          index += 1;
+          continue;
+        }
+        if (lines[index].trim() === '' && /^[-*]\s+/.test(lines[index + 1] || '')) {
+          index += 1;
+          continue;
+        }
+        break;
       }
       output.push(`<ul>${items.join('')}</ul>`);
       continue;
@@ -577,9 +586,17 @@ function renderMarkdown(body) {
 
     if (/^\d+\.\s+/.test(line)) {
       const items = [];
-      while (index < lines.length && /^\d+\.\s+/.test(lines[index])) {
-        items.push(`<li>${renderInline(lines[index].replace(/^\d+\.\s+/, ''))}</li>`);
-        index += 1;
+      while (index < lines.length) {
+        if (/^\d+\.\s+/.test(lines[index])) {
+          items.push(`<li>${renderInline(lines[index].replace(/^\d+\.\s+/, ''))}</li>`);
+          index += 1;
+          continue;
+        }
+        if (lines[index].trim() === '' && /^\d+\.\s+/.test(lines[index + 1] || '')) {
+          index += 1;
+          continue;
+        }
+        break;
       }
       output.push(`<ol>${items.join('')}</ol>`);
       continue;
@@ -916,8 +933,12 @@ async function insertCodeBlock(page, editor, code) {
   await menuTrigger.first().click({ force: true });
   await page.waitForTimeout(200);
   const codeTrigger = page.getByRole('button', { name: 'コード', exact: true });
-  if (await codeTrigger.count() === 0) return false;
-  await codeTrigger.first().click({ force: true });
+  for (let index = 0; index < await codeTrigger.count(); index += 1) {
+    const trigger = codeTrigger.nth(index);
+    if (!(await trigger.isVisible().catch(() => false))) continue;
+    await trigger.click({ force: true });
+    break;
+  }
   // keyboard.insertText()はnoteのコード入力欄で改行を保持せず、
   // 複数行のプロンプトが先頭行だけになることがある。本文貼り付けと
   // 同じくクリップボード経由にして、改行をそのまま渡す。
@@ -928,20 +949,72 @@ async function insertCodeBlock(page, editor, code) {
   await page.waitForTimeout(400);
   // noteのコードエリアはEnter 2回で通常段落へ戻る。
   await changeEditorParagraph(page);
-  return waitForCountIncrease(codeBlocks, beforeCodeBlockCount, 5000);
+  if (await waitForCountIncrease(codeBlocks, beforeCodeBlockCount, 5000)) return true;
+
+  // noteのコードUIが反応しない場合も本文を失わないよう、コード内容を通常本文として残す。
+  await pasteClipboardHtml(page, editor, `<pre><code>${escapeHtml(code)}</code></pre>`, code);
+  return true;
 }
 
 async function insertTableOfContents(page, editor) {
-  await focusEditorEnd(page, editor);
   const menuTrigger = page.getByRole('button', { name: 'メニューを開く' });
   if (await menuTrigger.count() === 0) return false;
   await menuTrigger.first().click();
   await page.waitForTimeout(150);
-  const tocTrigger = page.getByRole('button', { name: '目次', exact: true });
+  const tocTrigger = page.locator('#toc-setting');
   if (await tocTrigger.count() === 0) return false;
   await tocTrigger.first().click();
-  await page.waitForTimeout(500);
+  // note側で目次ブロックとカーソル位置が確定してから、後続本文を続ける。
+  await page.waitForTimeout(1500);
   return true;
+}
+
+function tableOfContentsHeadingText(markdown) {
+  const afterMarker = markdown.split(/<!--\s*note:toc\s*-->/i)[1] || '';
+  const heading = afterMarker.split('\n').find((line) => /^\s*#{2,6}\s+/.test(line));
+  return heading ? heading.replace(/^\s*#{2,6}\s+/, '').trim() : '';
+}
+
+function hasTocMarker(markdown) {
+  return /<!--\s*note:toc\s*-->/i.test(markdown);
+}
+
+async function repositionTableOfContents(page, editor, headingText) {
+  if (!headingText) return false;
+  const heading = editor.locator('h2, h3, h4, p').filter({ hasText: headingText }).first();
+  if (await heading.count() === 0) return false;
+  const anchor = heading.locator('xpath=preceding-sibling::*[1]');
+  if (await anchor.count() === 0) return false;
+  await anchor.click();
+  await page.keyboard.press('End');
+  return insertTableOfContents(page, editor);
+}
+
+async function formatAsLargeHeading(page, editor, headingText) {
+  const target = editor.locator('p').filter({ hasText: headingText }).first();
+  if (await target.count() === 0) return false;
+  await target.scrollIntoViewIfNeeded();
+  await target.click();
+  await page.waitForTimeout(200);
+
+  const headingMenus = page.locator('button').filter({ hasText: '見出し' });
+  for (let index = 0; index < await headingMenus.count(); index += 1) {
+    const menu = headingMenus.nth(index);
+    if (!(await menu.isVisible().catch(() => false))) continue;
+    await menu.click();
+    break;
+  }
+  await page.waitForTimeout(150);
+
+  const largeHeading = page.getByRole('button', { name: '大見出し', exact: true });
+  for (let index = 0; index < await largeHeading.count(); index += 1) {
+    const option = largeHeading.nth(index);
+    if (!(await option.isVisible().catch(() => false))) continue;
+    await option.click();
+    await page.waitForTimeout(300);
+    return true;
+  }
+  return false;
 }
 
 async function uploadAudioAtCursor(page, editor, filePath) {
@@ -1314,6 +1387,7 @@ async function launchNoteContext(options) {
   const context = await chromium.launchPersistentContext(profileDir, {
     headless: false,
     channel: process.env.NOTE_BROWSER_CHANNEL || 'chrome',
+    args: options.chromeProfile ? [`--profile-directory=${options.chromeProfile}`] : [],
     viewport: { width: 1440, height: 1000 },
   });
   return { context, profileDir };
@@ -1757,10 +1831,7 @@ async function runDraft(options, operation = 'draft') {
             continue;
           }
           if (segment.toc) {
-            const inserted = await insertTableOfContents(page, editor);
-            if (!inserted) {
-              throw new Error('目次の挿入UIを特定できませんでした');
-            }
+            // 本文を先に入れ、最後に目次を追加してから導入文直後へ移動する。
             continue;
           }
           if (segment.image) {
@@ -1779,6 +1850,18 @@ async function runDraft(options, operation = 'draft') {
     };
 
     await pasteSection(freeBodyMarkdown);
+    if (hasTocMarker(freeBodyMarkdown)) {
+      const headingText = tableOfContentsHeadingText(freeBodyMarkdown);
+      const inserted = await insertTableOfContents(page, editor);
+      if (!inserted) {
+        throw new Error('目次の挿入UIを特定できませんでした');
+      }
+      const moved = await repositionTableOfContents(page, editor, headingText);
+      if (!moved) {
+        throw new Error('目次を導入文の直後へ移動できませんでした');
+      }
+      await formatAsLargeHeading(page, editor, headingText);
+    }
     if (manifest.paidArea.enabled) {
       const inserted = await insertPaidBreak(page);
       if (!inserted) {
