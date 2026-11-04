@@ -1,6 +1,7 @@
 ---
 title: "新モデルより、使っているAIの「終わり」が気になる"
-note_hashtags: "#AI活用 #AI開発 #プロダクト開発 #仕事術 #気づき"
+note_hashtags: "#AIモデル #AI開発 #API #プロダクト開発 #AI活用"
+date: 2026-11-02
 note_id: "nd5ef7b01526c"
 ---
 

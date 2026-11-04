@@ -1113,6 +1113,26 @@ async function uploadCoverImage(page, imagePath) {
   }
 
   // カバー画像が設定済みの場合は、画像右上の変更ボタンになる。
+  const coverImage = page.locator('img[alt="eyecatch"]').first();
+  const coverImageArea = coverImage.locator('xpath=ancestor::*[.//button][1]');
+  const coverImageAreaButtons = coverImageArea.locator('button');
+  for (let index = 0; index < await coverImageAreaButtons.count(); index += 1) {
+    const trigger = coverImageAreaButtons.nth(index);
+    if (!(await trigger.isVisible().catch(() => false))) continue;
+    const chooserPromise = page.waitForEvent('filechooser', { timeout: 3000 }).catch(() => null);
+    await trigger.click({ force: true });
+    const chooser = await chooserPromise;
+    if (!chooser) continue;
+
+    await chooser.setFiles(imagePath);
+    await page.waitForTimeout(1000);
+    const cropSave = page.getByRole('button', { name: '保存', exact: true });
+    if (await cropSave.count() === 0) return false;
+    await cropSave.first().click();
+    await page.waitForTimeout(700);
+    return true;
+  }
+
   const existingCoverTrigger = page.locator('figure:has(img[alt="eyecatch"]) + div button');
   for (let index = 0; index < await existingCoverTrigger.count(); index += 1) {
     const trigger = existingCoverTrigger.nth(index);
