@@ -56,7 +56,7 @@ function usage() {
   --login                  未ログイン時にログイン完了まで待機します
   --login-timeout <ms>     ログイン待機時間（既定: 300000）
   --force                  既存のカバープロンプトを上書きする
-  --upload-cover           カバー画像のアップロードを試みる
+  --upload-cover           カバー画像のアップロードを試みる（updateでは明示指定時に変更）
   --upload-images          本文の画像位置でnoteの画像アップロードを試みる
   --upload-files           note:fileブロックのファイル添付を試みる
   --upload-audio           note:audioブロックの音声添付を試みる
@@ -1112,18 +1112,15 @@ async function uploadCoverImage(page, imagePath) {
     return true;
   }
 
-  // カバー画像が設定済みの場合は、画像右上の変更ボタンになる。
-  const coverImage = page.locator('img[alt="eyecatch"]').first();
-  const coverImageArea = coverImage.locator('xpath=ancestor::*[.//button][1]');
-  const coverImageAreaButtons = coverImageArea.locator('button');
-  for (let index = 0; index < await coverImageAreaButtons.count(); index += 1) {
-    const trigger = coverImageAreaButtons.nth(index);
+  // 削除ボタンを誤操作しないよう、変更と明示されたボタンだけを使う。
+  const changeCover = page.getByRole('button', { name: /カバー画像を変更|画像を変更|カバーを変更/ });
+  for (let index = 0; index < await changeCover.count(); index += 1) {
+    const trigger = changeCover.nth(index);
     if (!(await trigger.isVisible().catch(() => false))) continue;
     const chooserPromise = page.waitForEvent('filechooser', { timeout: 3000 }).catch(() => null);
-    await trigger.click({ force: true });
+    await trigger.click();
     const chooser = await chooserPromise;
     if (!chooser) continue;
-
     await chooser.setFiles(imagePath);
     await page.waitForTimeout(1000);
     const cropSave = page.getByRole('button', { name: '保存', exact: true });
@@ -1131,41 +1128,13 @@ async function uploadCoverImage(page, imagePath) {
     await cropSave.first().click();
     await page.waitForTimeout(700);
     return true;
-  }
-
-  const existingCoverTrigger = page.locator('figure:has(img[alt="eyecatch"]) + div button');
-  for (let index = 0; index < await existingCoverTrigger.count(); index += 1) {
-    const trigger = existingCoverTrigger.nth(index);
-    if (!(await trigger.isVisible().catch(() => false))) continue;
-    const chooserPromise = page.waitForEvent('filechooser', { timeout: 3000 }).catch(() => null);
-    await trigger.click();
-    const chooser = await chooserPromise;
-    if (!chooser) continue;
-
-    await chooser.setFiles(imagePath);
-    await page.waitForTimeout(1000);
-    const cropSave = page.getByRole('button', { name: '保存', exact: true });
-    if (await cropSave.count() === 0) return false;
-    await cropSave.first().click();
-    await page.waitForTimeout(700);
-    return true;
-  }
-
-  const triggers = page.getByRole('button', { name: /cover|カバー/i });
-  for (let index = 0; index < await triggers.count(); index += 1) {
-    const trigger = triggers.nth(index);
-    if (!(await trigger.isVisible().catch(() => false))) continue;
-    const chooserPromise = page.waitForEvent('filechooser', { timeout: 3000 }).catch(() => null);
-    await trigger.click();
-    const chooser = await chooserPromise;
-    if (chooser) {
-      await chooser.setFiles(imagePath);
-      await page.waitForTimeout(700);
-      return true;
-    }
   }
 
   return false;
+}
+
+function shouldUploadCover(operation, options, existingCover) {
+  return options.uploadCover || (operation === 'update' && options.replaceBody && !existingCover);
 }
 
 async function insertPaidBreak(page) {
@@ -1703,7 +1672,7 @@ async function runDraft(options, operation = 'draft') {
   if (options.save && willReplaceBody && localImages.length > 0 && !options.uploadImages) {
     throw new Error('画像付き記事を保存するには --upload-images も指定してください');
   }
-  if (options.save && willReplaceBody && manifest.coverImage && !manifest.coverImage.remote && !options.uploadCover) {
+  if (operation !== 'update' && options.save && willReplaceBody && manifest.coverImage && !manifest.coverImage.remote && !options.uploadCover) {
     throw new Error('カバー画像付き記事を保存するには --upload-cover も指定してください');
   }
   if (options.save && willReplaceBody && localFiles.length > 0 && !options.uploadFiles) {
@@ -1740,24 +1709,25 @@ async function runDraft(options, operation = 'draft') {
       throw new Error('noteのタイトル入力欄を特定できませんでした');
     }
 
-    await title.fill(manifest.title);
+    if (operation === 'draft') await title.fill(manifest.title);
     // 途中のアップロード失敗でも同じ下書きから再開できるようIDを確保する。
     if (operation === 'draft' && options.save && await saveNote(page)) {
       recordSavedDraftNoteId(manifestPath, manifest, page.url(), options.state);
       console.log(`下書き作成: ${page.url()}`);
     }
-    if (manifest.coverImage && !manifest.coverImage.remote && options.uploadCover) {
+    const cover = page.locator('img[alt="eyecatch"]').first();
+    const existingCover = operation === 'update' && await cover.count() ? await cover.getAttribute('src') : null;
+    const uploadCover = shouldUploadCover(operation, options, existingCover);
+    if (manifest.coverImage && !manifest.coverImage.remote && uploadCover) {
       const uploaded = await uploadCoverImage(page, manifest.coverImage.path);
       if (!uploaded) {
-        if (operation === 'update') {
-          console.log(`⚠️ 既存カバーの変更UIを特定できないため、現在のカバーを維持します: ${manifest.coverImage.source}`);
-        } else {
-          throw new Error(`カバー画像のアップロード操作を特定できませんでした: ${manifest.coverImage.source}`);
-        }
-      } else {
-        console.log('✅ カバー画像のアップロードを試みました');
+        throw new Error(`カバー画像のアップロード操作を特定できないため、本文の更新と保存を中止しました: ${manifest.coverImage.source}`);
       }
+      console.log('✅ カバー画像のアップロードを試みました');
+    } else if (existingCover) {
+      console.log('✅ 既存のカバー画像を維持します');
     }
+    if (operation === 'update') await title.fill(manifest.title);
 
     const editor = hasTitleLocator ? editableAreas.first() : editableAreas.nth(1);
     if (await editor.count() === 0) {
@@ -1899,6 +1869,9 @@ async function runDraft(options, operation = 'draft') {
     console.log(`準備ファイル: ${path.dirname(manifestPath)}`);
 
     if (options.save) {
+      if (existingCover && !uploadCover && (!await cover.count() || await cover.getAttribute('src') !== existingCover)) {
+        throw new Error('既存のカバー画像が変更されたため、保存を中止しました');
+      }
       const saved = await saveNote(page);
       if (!saved) {
         console.log('⚠️ 保存ボタンを自動特定できなかったため、保存は行っていません。');
@@ -1942,7 +1915,6 @@ async function main() {
     }
     if (!commandOptions.preserveBody) {
       commandOptions.replaceBody = true;
-      commandOptions.uploadCover = true;
       commandOptions.uploadImages = true;
       commandOptions.uploadFiles = true;
       commandOptions.uploadAudio = true;
