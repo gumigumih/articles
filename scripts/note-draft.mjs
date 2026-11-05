@@ -1015,6 +1015,7 @@ async function uploadCoverImage(page, imagePath) {
   // 現行noteエディタのカバー画像は、上部の画像アイコンから
   // 「画像をアップロード」を開き、トリミング確認後に保存する。
   const coverTrigger = page.locator('button:has(svg[aria-label="画像を追加"])');
+  await coverTrigger.first().waitFor({ state: 'visible', timeout: 10000 }).catch(() => {});
   for (let index = 0; index < await coverTrigger.count(); index += 1) {
     const trigger = coverTrigger.nth(index);
     if (!(await trigger.isVisible().catch(() => false))) continue;
@@ -1655,11 +1656,7 @@ async function runDraft(options, operation = 'draft') {
     if (manifest.coverImage && !manifest.coverImage.remote && options.uploadCover) {
       const uploaded = await uploadCoverImage(page, manifest.coverImage.path);
       if (!uploaded) {
-        if (operation === 'update') {
-          console.log(`⚠️ 既存カバーの変更UIを特定できないため、現在のカバーを維持します: ${manifest.coverImage.source}`);
-        } else {
-          throw new Error(`カバー画像のアップロード操作を特定できませんでした: ${manifest.coverImage.source}`);
-        }
+        throw new Error(`カバー画像のアップロード操作を特定できませんでした: ${manifest.coverImage.source}`);
       } else {
         console.log('✅ カバー画像のアップロードを試みました');
       }
