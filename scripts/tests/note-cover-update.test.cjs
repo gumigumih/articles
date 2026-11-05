@@ -17,7 +17,7 @@ test('本文更新では既存カバーを維持し、未設定または明示�
 });
 
 function collection(items = []) {
-  return { count: async () => items.length, nth: (index) => items[index], first: () => items[0] };
+  return { count: async () => items.length, nth: (index) => items[index], first: () => items[0] || { waitFor: async () => {} } };
 }
 
 test('変更操作が見つからない場合は他のボタンを押さず失敗する', async () => {
