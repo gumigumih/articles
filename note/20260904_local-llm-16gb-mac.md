@@ -4,7 +4,7 @@ note_id: "n2f5d996c4a44"
 note_hashtags: "#AI活用 #生成AI #ローカルLLM #Qwen3 #Mac #気づき"
 ---
 
-![CoverImage](images/20260904_local-llm-16gb-mac/cover-v2.png)
+![CoverImage](images/20260904_local-llm-16gb-mac/cover.png)
 
 # 話題のローカルLLM、MacBook Air 16GBでは二回とも無理だった話
 
